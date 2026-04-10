@@ -1,5 +1,5 @@
 """
-hub.py - ChatHub PUCP
+hub.py - ChatHub Invofact-Sunat
 Interfaz unificada: InvoFact Soporte + TAX-BOT SUNAT.
 Ejecutar con: .venv\\Scripts\\streamlit.exe run hub.py
 """
@@ -31,7 +31,7 @@ from core.db import (
 # 1. PAGE CONFIG
 # ══════════════════════════════════════════════════════════════════════════════
 st.set_page_config(
-    page_title="ChatHub PUCP",
+    page_title="ChatHub Invofact-Sunat",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -62,19 +62,22 @@ HUB_CSS = f"""
 [data-testid="stToolbar"] {{ display: none !important; }}
 footer {{ display: none !important; }}
 
-/* ── Sidebar ─────────────────────────────── */
+/* ── Sidebar — forzar siempre visible ────── */
 [data-testid="stSidebar"] {{
     background-color: {_SIDEBAR_BG} !important;
     border-right: 1px solid {_BORDER};
-    min-width: 230px !important;
+    min-width: 240px !important;
+    max-width: 240px !important;
+    /* Anular el transform: translateX(-300px) que Streamlit inyecta por JS */
+    transform: none !important;
+    transition: none !important;
+    visibility: visible !important;
+    display: block !important;
 }}
-[data-testid="stSidebarCollapsedControl"] {{
-    color: {_TEXT} !important;
-    background: {_SIDEBAR_BG} !important;
-}}
-/* Sidebar arrow (collapse button) always visible */
-[data-testid="stSidebarCollapsedControl"] svg {{
-    fill: {_BLUE} !important;
+/* Ocultar el botón de colapso para que no se pueda cerrar */
+[data-testid="stSidebarCollapsedControl"],
+button[data-testid="collapsedControl"] {{
+    display: none !important;
 }}
 [data-testid="stSidebar"] * {{ color: {_TEXT} !important; }}
 
@@ -676,17 +679,7 @@ with st.sidebar:
 
     # Footer del sidebar
     
-    st.markdown(
-        f"""
-        <div style="position:absolute;bottom:1rem;left:0;right:0;text-align:center;
-             padding:0 1rem;">
-            <p style="font-size:0.7rem;color:{_MUTED};margin:0;">
-                Proyecto Final · Diseño de Chatbots<br>PUCP 2024
-            </p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
+    
 
 
 # ══════════════════════════════════════════════════════════════════════════════

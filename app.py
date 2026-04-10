@@ -34,20 +34,6 @@ st.set_page_config(
 st.markdown(MAIN_CSS, unsafe_allow_html=True)
 
 # ══════════════════════════════════════════════════════════════
-# VISIBILIDAD DEL SIDEBAR
-# ══════════════════════════════════════════════════════════════
-
-if "sidebar_visible" not in st.session_state:
-    st.session_state.sidebar_visible = True
-
-# Inyectar CSS para ocultar el sidebar según el estado
-if not st.session_state.sidebar_visible:
-    st.markdown(
-        '<style>[data-testid="stSidebar"]{display:none!important}</style>',
-        unsafe_allow_html=True,
-    )
-
-# ══════════════════════════════════════════════════════════════
 # INICIALIZACIÓN
 # ══════════════════════════════════════════════════════════════
 
@@ -58,9 +44,6 @@ def cargar_motor() -> ChatbotEngine:
     return ChatbotEngine()
 
 motor = cargar_motor()
-
-if "sidebar_visible" not in st.session_state:
-    st.session_state.sidebar_visible = True
 
 # ID de hilo único por sesión
 if "thread_id" not in st.session_state:
@@ -130,19 +113,12 @@ with st.sidebar:
         st.rerun()
 
     st.markdown("")
-    if st.button("◀  Ocultar sidebar", use_container_width=True, key="btn_ocultar"):
-        st.session_state.sidebar_visible = False
-        st.rerun()
 
 # ══════════════════════════════════════════════════════════════
 # TABS: CHAT | HISTORIAL
 # ══════════════════════════════════════════════════════════════
 
 # Botón para mostrar el sidebar cuando está oculto
-if not st.session_state.sidebar_visible:
-    if st.button("▶  Mostrar barra lateral", key="btn_mostrar"):
-        st.session_state.sidebar_visible = True
-        st.rerun()
 
 tab_chat, tab_historial = st.tabs(["💬  Chat", "📋  Historial de conversaciones"])
 

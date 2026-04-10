@@ -200,11 +200,6 @@ html, body, [data-testid="stAppViewContainer"],
     color: {TEXT_MUTED} !important;
 }}
 
-/* ── Ocultar controles nativos del sidebar (usamos botones propios) ── */
-[data-testid="stSidebarCollapseButton"],
-[data-testid="stSidebarCollapsedControl"] {{
-    display: none !important;
-}}
 </style>
 """
 
