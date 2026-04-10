@@ -1,0 +1,107 @@
+pregunta,respuesta,categoria
+hola,"Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",saludo
+buenos dias,"Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",saludo
+buenas tardes,"Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",saludo
+buenas noches,"Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",saludo
+hola chatbot,"Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",saludo
+hola necesito ayuda,"Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",saludo
+alguien me ayuda,"Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",saludo
+hola soporte,"Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",saludo
+gracias,¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.,despedida
+muchas gracias,¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.,despedida
+ok gracias,¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.,despedida
+perfecto gracias,¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.,despedida
+eso es todo gracias,¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.,despedida
+hasta luego,¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.,despedida
+adios,¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.,despedida
+nos vemos,¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.,despedida
+quien eres,Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.,smalltalk
+que puedes hacer,Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.,smalltalk
+eres un bot,Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.,smalltalk
+me puedes ayudar,Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.,smalltalk
+como funciona este chat,Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.,smalltalk
+que servicios ofrece el sistema,Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.,smalltalk
+¿Cómo puedo emitir factura?,"Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",soporte
+¿Cómo hago para emitir factura?,"Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",soporte
+¿Me puedes explicar cómo emitir factura?,"Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",soporte
+Necesito ayuda para emitir factura,"Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",soporte
+Tengo un problema para emitir factura,"Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",soporte
+¿Dónde puedo emitir factura?,"Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",soporte
+¿Cuál es el proceso para emitir factura?,"Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",soporte
+¿Cómo puedo emitir boleta?,"Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",soporte
+¿Cómo hago para emitir boleta?,"Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",soporte
+¿Me puedes explicar cómo emitir boleta?,"Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",soporte
+Necesito ayuda para emitir boleta,"Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",soporte
+Tengo un problema para emitir boleta,"Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",soporte
+¿Dónde puedo emitir boleta?,"Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",soporte
+¿Cuál es el proceso para emitir boleta?,"Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",soporte
+¿Cómo puedo registrar productos?,"Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",soporte
+¿Cómo hago para registrar productos?,"Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",soporte
+¿Me puedes explicar cómo registrar productos?,"Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",soporte
+Necesito ayuda para registrar productos,"Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",soporte
+Tengo un problema para registrar productos,"Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",soporte
+¿Dónde puedo registrar productos?,"Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",soporte
+¿Cuál es el proceso para registrar productos?,"Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",soporte
+¿Cómo puedo configurar impresora?,Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.,soporte
+¿Cómo hago para configurar impresora?,Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.,soporte
+¿Me puedes explicar cómo configurar impresora?,Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.,soporte
+Necesito ayuda para configurar impresora,Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.,soporte
+Tengo un problema para configurar impresora,Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.,soporte
+¿Dónde puedo configurar impresora?,Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.,soporte
+¿Cuál es el proceso para configurar impresora?,Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.,soporte
+¿Cómo puedo error con SUNAT?,Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.,soporte
+¿Cómo hago para error con SUNAT?,Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.,soporte
+¿Me puedes explicar cómo error con SUNAT?,Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.,soporte
+Necesito ayuda para error con SUNAT,Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.,soporte
+Tengo un problema para error con SUNAT,Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.,soporte
+¿Dónde puedo error con SUNAT?,Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.,soporte
+¿Cuál es el proceso para error con SUNAT?,Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.,soporte
+¿Cómo puedo crear usuarios?,Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.,soporte
+¿Cómo hago para crear usuarios?,Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.,soporte
+¿Me puedes explicar cómo crear usuarios?,Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.,soporte
+Necesito ayuda para crear usuarios,Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.,soporte
+Tengo un problema para crear usuarios,Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.,soporte
+¿Dónde puedo crear usuarios?,Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.,soporte
+¿Cuál es el proceso para crear usuarios?,Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.,soporte
+¿Cómo puedo ver reportes?,Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.,soporte
+¿Cómo hago para ver reportes?,Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.,soporte
+¿Me puedes explicar cómo ver reportes?,Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.,soporte
+Necesito ayuda para ver reportes,Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.,soporte
+Tengo un problema para ver reportes,Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.,soporte
+¿Dónde puedo ver reportes?,Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.,soporte
+¿Cuál es el proceso para ver reportes?,Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.,soporte
+¿Cómo puedo instalar sistema?,Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.,soporte
+¿Cómo hago para instalar sistema?,Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.,soporte
+¿Me puedes explicar cómo instalar sistema?,Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.,soporte
+Necesito ayuda para instalar sistema,Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.,soporte
+Tengo un problema para instalar sistema,Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.,soporte
+¿Dónde puedo instalar sistema?,Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.,soporte
+¿Cuál es el proceso para instalar sistema?,Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.,soporte
+¿Cómo puedo elminar usuarios?,Para eliminar un usuario debes ingresar al módulo de usuarios --> buscar el usuario en la lista --> seleccionar la opción eliminar o desactivar. Es recomendable desactivar usuarios que ya no trabajan en el negocio para mantener la seguridad del sistema.,soporte
+que es invofact?, InvoFact es un sistema de gestión empresarial que permite administrar ventas - inventarios - compras - facturación electrónica desde una sola plataforma.,soporte
+para que tipos de negocio sirve invofact?, InvoFact puede ser utilizado por restaurantes - cafeterias - bodegas - tiendas retail - minimarkets - ferreterias y prácticamente cualquier negocio que necesite controlar ventas e inventarios., soporte
+invofact esta conectado con SUNAT?, Si. El sistema se conecta directamente con los servidores de SUNAT para enviar y validar comprobantes electrónicos como boletas y facturas., soporte
+se puede usar invofact desde un celular?, Si. InvoFact cuenta con una aplicación móvil disponible para dispositivos Android que permite gestionar el negocio desde smartphones o tablets.,soporte
+invofact funciona sin internet?, Algunas funciones pueden operar temporalmente sin internet pero para enviar comprobantes electrónicos a SUNAT se requiere conexión a internet., soporte
+como puedo registrar un producto?, Debes ingresar al módulo de productos --> seleccionar la opción crear producto --> luego completar la información como nombre - precio - categoria - stock.,soporte
+como se realiza una venta?, Debes ingresar al módulo de ventas --> seleccionar los productos que el cliente desea comprar --> confirmar el pago para emitir el comprobante correspondiente.,soporte
+que tipos de comprobantes se puede emitir?, El sistema permite emitir boletas electrónicas - facturas electrónicas - notas de crédito - notas de débito.,soporte
+que significa que un comprobante este rechazado?, Significa que SUNAT no aceptó el comprobante debido a errores en los datos o inconsistencias en la información enviada.,soporte
+Se puede enviar el comprobante por whatsapp?, Si. InvoFact permite enviar comprobantes digitales directamente al cliente mediante WhatsApp.,soporte
+que es un rol de usuario?, Un rol de usuario define los permisos que tiene una persona dentro del sistema. Un administrador puede acceder a todas las funciones del sistema - mientras que un cajero solo puede registrar ventas.,soporte
+cuantos usuarios puede tener el sistema?, El numero de usuarios depende del plan contratado del sistema. Sin embargo el sistema está diseñado para permitir multiples usuarios trabajando al mismo tiempo dentro del negocio. ,soporte
+como modifico el precio de un producto?, Debes ingresar al módulo Productos --> buscar el producto que deseas modificar --> seleccionar la opción editar. Luego puedes cambiar el precio de venta y guardar los cambios.,soporte
+como elimino un producto?, Para eliminar un producto debes ingresar al módulo de productos --> seleccionar el producto en la lista --> elegir la opción eliminar. Algunos sistemas prefieren desactivar productos en lugar de eliminarlos para mantener el historial de ventas.,soporte
+que pasa si mi stock llega a cero?, Cuando el stock de un producto llega a cero significa que ya no hay unidades disponibles en inventario. El sistema puede mostrar una alerta para indicar que el producto debe ser reabastecido mediante una compra.,soporte
+como ver el inventario?, El inventario puede consultarse desde el módulo de productos. Alli se muestra la lista completa de productos junto con la cantidad disponible en stock.,soporte
+como aplicar descuentos?, Durante el proceso de venta el sistema permite aplicar descuentos antes de confirmar el pago. Solo debes ingresar el monto o porcentaje de descuento y el sistema recalculará el total automáticamente.,soporte
+como reimprimir un ticket?, Para reimprimir un ticket debes ingresar al historial de ventas o al módulo de facturación --> seleccionar la venta correspondiente --> elegir la opción reimprimir.,soporte
+como anular una venta?, Para anular una venta se debe emitir una nota de crédito o utilizar la opción de anulación disponible en el sistema - dependiendo del estado del comprobante.,soporte
+como registrar una compra?,Debes ingresar al módulo de compras --> seleccionar los productos adquiridos al proveedor --> registrar las cantidades --> confirmar la compra. El sistema actualizará automáticamente el inventario.,soporte
+como registrar un proveedor?,Para registrar un proveedor debes ingresar al módulo correspondiente y agregar la información básica como nombre de la empresa los cuales son RUC - teléfono - dirección.,soporte
+como es aperturar de caja?,La apertura de caja es el proceso mediante el cual se registra el dinero inicial con el que comenzará a operar la caja durante el dia.,soporte
+como es cierre de caja?,El cierre de caja consiste en revisar el dinero total registrado durante el dia y compararlo con el dinero fisico disponible para verificar que coincidan.,soporte
+como registrar un egreso?,Los egresos se registran cuando se retira dinero de la caja para pagar gastos del negocio - como compras - servicios o pagos menores.,soporte
+como generar reporte de ventas?,Debes ingresar al módulo de reportes --> seleccionar el reporte de ventas --> elegir el rango de fechas que deseas analizar.,soporte
+como exportar a excel?,Muchos reportes del sistema permiten exportar la información en formato Excel para facilitar su análisis o compartirla con el contador.,soporte
+Ya tienes el cliente registrado?,Si: Entonces añade los productos --> verifica monto total y confirma la factura. No: Primero registra al cliente en el módulo Clientes --> Nuevo cliente.,soporte

@@ -1,0 +1,470 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿Qué es InvoFact?",
+    "respuesta": "InvoFact es un sistema de gestión empresarial que permite administrar ventas, inventarios, compras y facturación electrónica desde una sola plataforma. Está diseñado para digitalizar y automatizar los procesos comerciales de pequeñas y medianas empresas, reduciendo errores y mejorando la eficiencia operativa.",
+    "categoria": "General"
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Qué hace InvoFact?",
+    "respuesta": "InvoFact permite registrar ventas y emitir boletas o facturas electrónicas, administrar el inventario de productos, registrar compras a proveedores, controlar el flujo de caja y generar reportes para analizar el rendimiento del negocio, todo desde una sola plataforma.",
+    "categoria": "General"
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Para qué tipo de negocios sirve InvoFact?",
+    "respuesta": "InvoFact es ideal para restaurantes, bodegas, tiendas, cafeterías, minimarkets y comercios en general. Cualquier negocio que necesite controlar ventas, inventario y facturación electrónica puede beneficiarse de este sistema.",
+    "categoria": "General"
+  },
+  {
+    "id": 4,
+    "pregunta": "¿InvoFact está conectado con SUNAT?",
+    "respuesta": "Sí, InvoFact se conecta directamente con los servidores oficiales de SUNAT para emitir comprobantes electrónicos válidos según la normativa tributaria del Perú. Además, puede consultar datos de clientes utilizando los servicios de RENIEC y SUNAT para validar información de identidad.",
+    "categoria": "General"
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Se puede usar InvoFact desde un celular?",
+    "respuesta": "Sí, InvoFact cuenta con una aplicación disponible para dispositivos Android. Puedes descargarla desde Google Play Store buscando 'InvoFact'. También puedes acceder desde tablets y computadoras.",
+    "categoria": "General"
+  },
+  {
+    "id": 6,
+    "pregunta": "¿InvoFact funciona sin internet?",
+    "respuesta": "InvoFact requiere conexión a internet para emitir comprobantes electrónicos y sincronizar datos con SUNAT. Para la facturación electrónica es indispensable la conectividad, ya que los comprobantes deben ser validados en línea por los servidores de SUNAT.",
+    "categoria": "General"
+  },
+  {
+    "id": 7,
+    "pregunta": "¿Cómo puedo contactar al soporte de InvoFact?",
+    "respuesta": "Puedes comunicarte con el soporte de InvoFact a través de: Email: soporte@invofact.com, Facebook: facebook.com/InvoFact, YouTube: youtube.com/@invofact, o visitar el sitio web oficial en https://invofact.com.",
+    "categoria": "General"
+  },
+  {
+    "id": 8,
+    "pregunta": "¿Cuáles son los módulos de InvoFact?",
+    "respuesta": "InvoFact está organizado en módulos especializados: Módulo de Usuarios (gestión de accesos), Módulo de Productos (catálogo e inventario), Módulo de Ventas (transacciones y facturación), Módulo de Compras (adquisiciones a proveedores), Módulo de Caja (control de dinero), Módulo de Reportes (análisis del negocio) y Módulo de Configuración.",
+    "categoria": "General"
+  },
+  {
+    "id": 9,
+    "pregunta": "¿Cuáles son los beneficios de usar InvoFact?",
+    "respuesta": "Los principales beneficios de InvoFact son: automatización de procesos administrativos, reducción de errores en registros de ventas, mayor control sobre inventarios y stock, información financiera disponible en tiempo real y cumplimiento de normas de facturación electrónica exigidas por SUNAT.",
+    "categoria": "General"
+  },
+  {
+    "id": 10,
+    "pregunta": "¿Cómo crear un usuario?",
+    "respuesta": "En el módulo de Usuarios, selecciona la opción de crear nuevo usuario e ingresa la información requerida: nombre completo, correo electrónico, contraseña y el rol asignado dentro del sistema (administrador, cajero, vendedor, etc.). Solo el administrador del sistema puede crear nuevos usuarios.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 11,
+    "pregunta": "¿Cómo eliminar un usuario?",
+    "respuesta": "En el módulo de Usuarios, busca el usuario que deseas eliminar y utiliza la opción de desactivar. Se recomienda desactivar usuarios en lugar de eliminarlos permanentemente, para conservar el historial de operaciones realizadas por ese usuario en el sistema.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 12,
+    "pregunta": "¿Qué es un rol de usuario?",
+    "respuesta": "Un rol de usuario define los permisos y acciones que puede realizar una persona dentro del sistema InvoFact. Por ejemplo, un administrador tiene acceso completo a todas las funciones, mientras que un cajero solo puede registrar ventas y manejar la caja, y un vendedor puede consultar productos y generar ventas.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 13,
+    "pregunta": "¿Cuántos usuarios puede tener el sistema?",
+    "respuesta": "InvoFact soporta múltiples usuarios con diferentes roles. Puedes crear tantos usuarios como necesites para tu equipo de trabajo, asignando roles diferenciados como administrador, cajero, vendedor o supervisor según las responsabilidades de cada persona.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 14,
+    "pregunta": "¿Cómo asignar permisos a un usuario?",
+    "respuesta": "Los permisos se asignan a través de los roles en el módulo de Usuarios. Al crear o editar un usuario, selecciona el rol correspondiente (administrador, cajero, vendedor, etc.). Cada rol tiene un conjunto predefinido de permisos que determinan qué módulos y acciones puede utilizar el usuario.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 15,
+    "pregunta": "¿Cómo registrar personas o clientes?",
+    "respuesta": "En el módulo de Usuarios, en la subsección 'Personas', puedes registrar clientes que son personas naturales con su nombre completo, DNI, teléfono, correo y dirección. Para empresas o clientes jurídicos, usa la subsección 'Persona Jurídica' donde ingresas razón social, RUC y dirección fiscal.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 16,
+    "pregunta": "¿Cómo puedo registrar un producto?",
+    "respuesta": "En el módulo de Productos, selecciona la opción de nuevo producto e ingresa los datos requeridos: nombre del producto, código interno, precio de venta, precio de compra, categoría a la que pertenece y el stock inicial disponible. Guarda el registro para que el producto esté disponible en el sistema.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 17,
+    "pregunta": "¿Cómo modificar el precio de un producto?",
+    "respuesta": "En el módulo de Productos, busca el producto que deseas modificar utilizando el buscador o filtrando por categoría. Selecciona la opción de editar y actualiza el precio de venta o de compra según corresponda. Guarda los cambios para que se apliquen de inmediato en futuras ventas.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 18,
+    "pregunta": "¿Cómo eliminar un producto?",
+    "respuesta": "En el módulo de Productos, busca el producto y utiliza la opción de eliminar o desactivar. Si el producto tiene historial de ventas registradas, es recomendable desactivarlo en lugar de eliminarlo permanentemente, para mantener la integridad de los registros históricos del negocio.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 19,
+    "pregunta": "¿Qué pasa si el stock llega a cero?",
+    "respuesta": "Cuando el stock de un producto llega a cero, el sistema lo indica como sin disponibilidad. Es recomendable registrar una compra a proveedor para reponer el inventario. El sistema también descuenta automáticamente del stock cada vez que se realiza una venta del producto.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 20,
+    "pregunta": "¿Cómo ver el inventario?",
+    "respuesta": "El inventario se visualiza en el módulo de Productos, donde aparece el listado completo de artículos con su stock actual disponible. Cada venta descuenta automáticamente las unidades vendidas, y cada compra registrada incrementa el stock correspondiente.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 21,
+    "pregunta": "¿Cómo organizar productos por categorías?",
+    "respuesta": "En el módulo de Productos, puedes crear y gestionar categorías para organizar tu catálogo. Al registrar un producto, asígnale una categoría como Bebidas, Comidas, Postres o Productos de limpieza. Esto facilita la búsqueda y administración de productos similares.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 22,
+    "pregunta": "¿Qué datos necesito para registrar un producto?",
+    "respuesta": "Para registrar un producto en InvoFact necesitas: nombre del producto, código interno (opcional), precio de venta, precio de compra, categoría a la que pertenece y stock disponible. También puedes agregar imagen y descripción del producto.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 23,
+    "pregunta": "¿Cómo actualizar el stock de un producto?",
+    "respuesta": "El stock se actualiza automáticamente: disminuye con cada venta registrada y aumenta con cada compra a proveedor. También puedes hacer un ajuste manual del stock editando el producto en el módulo de Productos si necesitas corregir diferencias de inventario.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 24,
+    "pregunta": "¿Cómo se realiza una venta?",
+    "respuesta": "El proceso de venta en InvoFact sigue estos pasos: 1) Seleccionar los productos que el cliente desea comprar, 2) Agregar los productos al detalle de venta con sus cantidades, 3) Confirmar el pedido, 4) Procesar el pago del cliente, 5) Emitir el comprobante electrónico (boleta o factura según corresponda).",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 25,
+    "pregunta": "¿Qué tipos de comprobantes se pueden emitir?",
+    "respuesta": "InvoFact permite emitir cuatro tipos de comprobantes electrónicos: 1) Boleta de venta electrónica (para consumidores finales con DNI), 2) Factura electrónica (para empresas con RUC), 3) Nota de crédito (para anular o corregir ventas anteriores), 4) Nota de débito (para aumentar el monto de una venta previa).",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 26,
+    "pregunta": "¿Qué significa que un comprobante esté rechazado?",
+    "respuesta": "Un comprobante rechazado significa que SUNAT no lo aceptó como válido. Esto puede ocurrir por errores en el RUC del cliente, datos incorrectos o problemas de conexión al momento de la emisión. Debes revisar los datos del comprobante, corregir los errores y volver a emitirlo.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 27,
+    "pregunta": "¿Qué significa que un comprobante esté observado?",
+    "respuesta": "Un comprobante observado significa que SUNAT lo recibió pero encontró algún detalle que debe revisarse. A diferencia del rechazado, el observado sí tiene cierta validez pero se recomienda revisar y corregir la observación. Los estados posibles son: Aceptado (válido), Observado (revisar) y Rechazado (inválido).",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 28,
+    "pregunta": "¿Se puede enviar el comprobante por WhatsApp?",
+    "respuesta": "Sí, InvoFact permite compartir el comprobante electrónico a través de diferentes canales digitales, incluyendo WhatsApp, correo electrónico u otros medios para facilitar la entrega inmediata al cliente sin necesidad de imprimir físicamente el comprobante.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 29,
+    "pregunta": "¿Cómo aplicar descuentos en una venta?",
+    "respuesta": "Durante el proceso de venta, al agregar productos al detalle puedes aplicar descuentos por porcentaje o por monto fijo. El descuento se puede aplicar sobre productos individuales o sobre el total de la venta, según la configuración habilitada en el sistema para tu negocio.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 30,
+    "pregunta": "¿Cómo reimprimir un ticket?",
+    "respuesta": "En el módulo de Ventas, accede al historial de ventas y busca la venta cuyo comprobante deseas reimprimir. Selecciona la venta y usa la opción de reimprimir o volver a imprimir. El sistema enviará el documento a la impresora configurada (Bluetooth, WiFi o USB).",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 31,
+    "pregunta": "¿Cómo anular una venta?",
+    "respuesta": "Para anular una venta ya emitida, debes generar una Nota de crédito asociada al comprobante original (boleta o factura). La nota de crédito permite revertir total o parcialmente la operación de forma correcta ante SUNAT, devolviendo el dinero al cliente y reponiendo el stock si corresponde.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 32,
+    "pregunta": "¿Qué es una nota de crédito?",
+    "respuesta": "Una nota de crédito es un documento electrónico que se utiliza para corregir o anular una venta realizada anteriormente. Se emplea cuando se necesita devolver dinero al cliente, corregir un error en el comprobante o registrar la devolución de productos. Siempre debe estar asociada a una boleta o factura previamente emitida.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 33,
+    "pregunta": "¿Qué es una nota de débito?",
+    "respuesta": "Una nota de débito es un documento electrónico que se utiliza para aumentar el monto de una venta ya registrada. Se emplea cuando es necesario agregar cargos adicionales a una factura o boleta, por ejemplo por intereses, ajustes de precio o costos adicionales. Siempre debe estar vinculada a un comprobante previamente emitido.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 34,
+    "pregunta": "¿Cuándo emitir boleta y cuándo factura?",
+    "respuesta": "Emite una boleta de venta cuando el cliente es una persona natural que no requiere comprobante con RUC (consumidor final que solo da su DNI o no da documento). Emite una factura cuando el cliente es una empresa o persona con RUC que necesita el comprobante para fines contables y tributarios (crédito fiscal del IGV).",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 35,
+    "pregunta": "¿Cómo registrar una compra?",
+    "respuesta": "En el módulo de Compras, selecciona la opción de nueva compra. Elige el proveedor correspondiente, agrega los productos adquiridos con sus cantidades y precios de costo. Al confirmar la compra, el sistema actualiza automáticamente el inventario incrementando el stock de los productos comprados.",
+    "categoria": "Compras"
+  },
+  {
+    "id": 36,
+    "pregunta": "¿Cómo registrar un proveedor?",
+    "respuesta": "Los proveedores se registran en el módulo de Compras. Ingresa los datos de la empresa proveedora: nombre o razón social, RUC, dirección, teléfono de contacto y correo electrónico. Una vez registrado, podrás asociar el proveedor a tus futuras compras de manera sencilla.",
+    "categoria": "Compras"
+  },
+  {
+    "id": 37,
+    "pregunta": "¿Cómo ver el historial de compras?",
+    "respuesta": "El historial de compras se encuentra en el módulo de Compras, donde puedes visualizar todas las adquisiciones realizadas a proveedores. Puedes filtrar por fecha, proveedor o producto para encontrar registros específicos y revisar el costo total invertido en inventario.",
+    "categoria": "Compras"
+  },
+  {
+    "id": 38,
+    "pregunta": "¿Qué es la materia prima en el sistema?",
+    "respuesta": "La materia prima en InvoFact corresponde a insumos utilizados para la preparación de productos o platillos, especialmente útil para restaurantes y negocios gastronómicos. Se registra en el módulo de Compras y permite controlar los ingredientes o materiales base que se usan en la producción.",
+    "categoria": "Compras"
+  },
+  {
+    "id": 39,
+    "pregunta": "¿Qué es apertura de caja?",
+    "respuesta": "La apertura de caja es el primer paso al iniciar la jornada laboral en el negocio. Consiste en registrar el dinero inicial disponible en la caja antes de comenzar las ventas del día. Este monto inicial permite llevar un control preciso del dinero que ingresará durante la jornada y facilita el cuadre al cierre.",
+    "categoria": "Caja"
+  },
+  {
+    "id": 40,
+    "pregunta": "¿Qué es cierre de caja?",
+    "respuesta": "El cierre de caja se realiza al finalizar la jornada laboral. El sistema calcula automáticamente el total de dinero esperado considerando el monto inicial, todas las ventas, ingresos adicionales y egresos del día. Luego se compara ese monto con el dinero físico disponible para verificar que todo coincida correctamente.",
+    "categoria": "Caja"
+  },
+  {
+    "id": 41,
+    "pregunta": "¿Cómo registrar un egreso de caja?",
+    "respuesta": "En el módulo de Caja, selecciona la opción de registrar egreso e ingresa el concepto del gasto (compra de insumos, pago de servicios, transporte, etc.) y el monto correspondiente. Registrar correctamente los egresos es fundamental para mantener un control financiero claro del negocio.",
+    "categoria": "Caja"
+  },
+  {
+    "id": 42,
+    "pregunta": "¿Cómo registrar un ingreso extra en caja?",
+    "respuesta": "En el módulo de Caja, utiliza la opción de registrar ingreso para anotar dinero que entra a la caja y que no proviene directamente de una venta registrada en el sistema. Por ejemplo, si el dueño agrega dinero adicional a la caja o se recibe un pago pendiente de un cliente.",
+    "categoria": "Caja"
+  },
+  {
+    "id": 43,
+    "pregunta": "¿Cómo cuadrar la caja al final del día?",
+    "respuesta": "Al realizar el cierre de caja, el sistema calcula automáticamente el total esperado sumando el monto de apertura más todos los ingresos (ventas y entradas extras) menos todos los egresos registrados. Debes contar el dinero físico y compararlo con el total del sistema para verificar que coincidan y detectar diferencias.",
+    "categoria": "Caja"
+  },
+  {
+    "id": 44,
+    "pregunta": "¿Qué movimientos registra el módulo de caja?",
+    "respuesta": "El módulo de caja registra: apertura de caja (monto inicial al inicio del día), ingresos por ventas (automático), ingresos adicionales (manuales), egresos o gastos del negocio (manuales), y cierre de caja (resumen final del día). Todos estos movimientos forman el flujo de caja diario del negocio.",
+    "categoria": "Caja"
+  },
+  {
+    "id": 45,
+    "pregunta": "¿Cómo generar reporte de ventas?",
+    "respuesta": "En el módulo de Reportes, selecciona la opción de reporte de ventas y define el período de tiempo que deseas analizar (día, semana, mes o año). El sistema generará un resumen completo con los productos vendidos, cantidades, monto de cada venta y el total general del período seleccionado.",
+    "categoria": "Reportes"
+  },
+  {
+    "id": 46,
+    "pregunta": "¿Cómo exportar reportes a Excel?",
+    "respuesta": "Desde el módulo de Reportes, genera el reporte deseado y selecciona la opción de exportar a Excel. El archivo se descargará con toda la información del reporte en formato .xlsx, ideal para enviarlo al contador, realizar análisis adicionales o presentarlo en reuniones de negocio.",
+    "categoria": "Reportes"
+  },
+  {
+    "id": 47,
+    "pregunta": "¿Qué tipos de reportes tiene el sistema?",
+    "respuesta": "InvoFact genera los siguientes reportes: 1) Reporte de ventas (transacciones por período), 2) Reporte de compras (adquisiciones a proveedores), 3) Reporte de facturación (comprobantes emitidos para SUNAT/contador), 4) Reporte de productos más vendidos (ranking de artículos). Todos exportables a Excel.",
+    "categoria": "Reportes"
+  },
+  {
+    "id": 48,
+    "pregunta": "¿Cómo ver los productos más vendidos?",
+    "respuesta": "En el módulo de Reportes, accede al reporte de productos más vendidos. Este muestra un ranking de los artículos con mayor cantidad de ventas, indicando cuáles generan mayores ingresos. Es muy útil para tomar decisiones sobre qué productos promocionar, ajustar precios o aumentar stock.",
+    "categoria": "Reportes"
+  },
+  {
+    "id": 49,
+    "pregunta": "¿Cómo ver el reporte de compras?",
+    "respuesta": "En el módulo de Reportes, selecciona el reporte de compras para visualizar todas las adquisiciones realizadas a proveedores en un período. Incluye los productos comprados, cantidades, costo por producto y monto total pagado. Útil para controlar gastos e inversión en inventario.",
+    "categoria": "Reportes"
+  },
+  {
+    "id": 50,
+    "pregunta": "¿Cómo usar el reporte de facturación?",
+    "respuesta": "El reporte de facturación muestra todos los comprobantes electrónicos emitidos (boletas y facturas). Se genera normalmente de forma mensual y puede exportarse a Excel para enviarlo al contador del negocio. El contador utiliza esta información para realizar las declaraciones tributarias ante la SUNAT.",
+    "categoria": "Reportes"
+  },
+  {
+    "id": 51,
+    "pregunta": "¿Cómo conectar una impresora?",
+    "respuesta": "InvoFact soporta tres tipos de conexión para impresoras térmicas: 1) Bluetooth: para dispositivos móviles Android sin cables, ideal para negocios pequeños, 2) WiFi: conecta la impresora a la red local para imprimir desde múltiples dispositivos, 3) USB: conexión directa por cable a computadora, estable y rápida.",
+    "categoria": "Configuracion"
+  },
+  {
+    "id": 52,
+    "pregunta": "¿Qué tipos de impresoras son compatibles con InvoFact?",
+    "respuesta": "InvoFact es compatible con impresoras térmicas de tickets que soporten conexión Bluetooth, WiFi o USB. Estas impresoras se usan para imprimir comprobantes de venta al cliente y comandas a la cocina (en caso de restaurantes). Desde la configuración del sistema puedes registrar y administrar las impresoras del negocio.",
+    "categoria": "Configuracion"
+  },
+  {
+    "id": 53,
+    "pregunta": "¿Qué es el módulo de ambientes?",
+    "respuesta": "El módulo de Ambientes está orientado principalmente a restaurantes y negocios gastronómicos. Permite administrar cocinas, mesas y zonas del establecimiento. Puedes configurar impresoras de cocina para impresión automática de comandas y gestionar el estado de las mesas (ocupada o libre) en tiempo real.",
+    "categoria": "Configuracion"
+  },
+  {
+    "id": 54,
+    "pregunta": "¿Cómo funciona la arquitectura modular de InvoFact?",
+    "respuesta": "InvoFact está dividido en módulos especializados independientes: Usuarios, Productos, Ventas, Compras, Caja y Reportes. Todos están conectados mediante una base de datos central que sincroniza la información automáticamente. Esto permite que el sistema sea más organizado, escalable y fácil de mantener, ya que cada módulo puede actualizarse sin afectar a los demás.",
+    "categoria": "General"
+  },
+  {
+    "id": 55,
+    "pregunta": "¿Qué ocurre automáticamente cuando se registra una venta?",
+    "respuesta": "Cuando se registra una venta en InvoFact, el sistema actúa de forma integrada: 1) El módulo de Ventas registra la transacción, 2) El módulo de Productos descuenta el stock, 3) El módulo de Caja registra el ingreso de dinero, 4) El módulo de Facturación envía el comprobante a SUNAT, 5) El módulo de Reportes actualiza las estadísticas del negocio. Todo ocurre de manera automática y sincronizada.",
+    "categoria": "General"
+  },
+  {
+    "id": 56,
+    "pregunta": "¿Cómo descargo la aplicación InvoFact?",
+    "respuesta": "Puedes descargar la aplicación InvoFact para Android desde Google Play Store. Busca 'InvoFact' o accede directamente desde el enlace disponible en el sitio web https://invofact.com. La app está disponible para celulares y tablets Android y permite gestionar tu negocio desde cualquier lugar.",
+    "categoria": "General"
+  },
+  {
+    "id": 57,
+    "pregunta": "¿InvoFact valida datos con RENIEC o SUNAT?",
+    "respuesta": "Sí, InvoFact se conecta con los servicios de RENIEC y SUNAT para validar información de identidad de clientes. Esto permite autocompletar datos al ingresar el DNI o RUC de un cliente, reduciendo errores al momento de emitir comprobantes electrónicos.",
+    "categoria": "General"
+  },
+  {
+    "id": 58,
+    "pregunta": "¿Qué negocios pueden usar InvoFact?",
+    "respuesta": "InvoFact está diseñado para pequeñas y medianas empresas en Perú que necesiten digitalizar su gestión comercial. Es especialmente útil para restaurantes, bodegas, tiendas, cafeterías, minimarkets y comercios en general que requieran control de ventas, inventario y facturación electrónica desde una sola plataforma.",
+    "categoria": "General"
+  },
+  {
+    "id": 59,
+    "pregunta": "¿Cómo registrar una persona natural como cliente?",
+    "respuesta": "En el módulo de Usuarios, accede a la subsección 'Personas'. Ingresa los datos del cliente: nombre completo, DNI, número de teléfono, correo electrónico y dirección. Estos datos se utilizan al momento de emitir boletas de venta electrónicas a consumidores finales.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 60,
+    "pregunta": "¿Cómo registrar una empresa o cliente con RUC?",
+    "respuesta": "En el módulo de Usuarios, accede a la subsección 'Persona Jurídica'. Ingresa los datos de la empresa: razón social, RUC, dirección fiscal y teléfono de contacto. Estos datos son necesarios para emitir facturas electrónicas a clientes empresariales que necesitan el comprobante para crédito fiscal del IGV.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 61,
+    "pregunta": "¿Cuáles son los tipos de usuarios que se pueden crear?",
+    "respuesta": "En InvoFact puedes crear diferentes tipos de usuarios según su rol en el negocio: Administrador (acceso completo a todas las funciones), Cajero (registro de ventas y manejo de caja), Vendedor (consulta de productos y generación de ventas) y Supervisor (revisión de operaciones). Cada rol tiene permisos diferenciados.",
+    "categoria": "Usuarios"
+  },
+  {
+    "id": 62,
+    "pregunta": "¿Qué es una factura electrónica?",
+    "respuesta": "Una factura electrónica es un comprobante utilizado cuando la venta se realiza a una empresa o persona con número de RUC. Permite que el cliente lo use para fines contables y tributarios, como el crédito fiscal del IGV. Las facturas electrónicas se envían directamente a los servidores de SUNAT para su validación.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 63,
+    "pregunta": "¿Qué es una boleta de venta electrónica?",
+    "respuesta": "Una boleta de venta electrónica es un comprobante que se emite cuando el cliente es un consumidor final que no necesita factura con RUC. Se usa cuando el cliente solo proporciona su DNI o incluso cuando no se registra documento de identidad. Es el tipo de comprobante más común en tiendas, restaurantes, bodegas y minimarkets.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 64,
+    "pregunta": "¿Cómo emitir una factura electrónica?",
+    "respuesta": "Para emitir una factura electrónica: 1) Inicia una nueva venta en el módulo de Ventas, 2) Selecciona 'Factura' como tipo de comprobante, 3) Ingresa el RUC del cliente (el sistema puede autocompletarlo desde SUNAT), 4) Agrega los productos y cantidades, 5) Confirma el pago, 6) El sistema envía la factura a SUNAT automáticamente y la entrega al cliente.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 65,
+    "pregunta": "¿Cómo emitir una boleta de venta?",
+    "respuesta": "Para emitir una boleta: 1) Inicia una nueva venta en el módulo de Ventas, 2) Selecciona 'Boleta' como tipo de comprobante, 3) Opcionalmente ingresa el DNI del cliente, 4) Agrega los productos y cantidades al detalle, 5) Confirma el pago, 6) El sistema emite la boleta electrónica y la registra en SUNAT automáticamente.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 66,
+    "pregunta": "¿Cuáles son los estados posibles de un comprobante?",
+    "respuesta": "Un comprobante electrónico puede tener tres estados según la respuesta de SUNAT: 1) Aceptado: el comprobante fue validado correctamente y es legalmente válido, 2) Observado: SUNAT lo recibió pero hay un detalle que debe revisarse, 3) Rechazado: SUNAT no aceptó el comprobante, debes corregir los datos y volver a emitirlo.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 67,
+    "pregunta": "¿Qué significa que un comprobante esté aceptado?",
+    "respuesta": "Un comprobante con estado 'Aceptado' significa que fue validado correctamente por SUNAT y es legalmente válido. El comprobante tiene plena vigencia fiscal y puede entregarse al cliente con total certeza de su validez tributaria.",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 68,
+    "pregunta": "¿Cómo funciona la facturación electrónica en InvoFact?",
+    "respuesta": "InvoFact se conecta directamente con los servidores de SUNAT para enviar y validar los comprobantes electrónicos en tiempo real. Al emitir una boleta o factura, el sistema genera el documento en formato XML, lo firma digitalmente y lo transmite a SUNAT. SUNAT responde con el estado del comprobante (Aceptado, Observado o Rechazado).",
+    "categoria": "Ventas"
+  },
+  {
+    "id": 69,
+    "pregunta": "¿Cómo funciona el control automático de inventario?",
+    "respuesta": "El inventario en InvoFact se actualiza automáticamente: cada vez que se registra una venta, el sistema descuenta las unidades vendidas del stock disponible. Cuando se registra una compra a proveedor, el sistema incrementa el stock. También puedes hacer ajustes manuales si necesitas corregir diferencias de inventario.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 70,
+    "pregunta": "¿Cómo crear categorías de productos?",
+    "respuesta": "En el módulo de Productos, accede a la sección de categorías para crear nuevas agrupaciones. Puedes definir categorías como Bebidas, Comidas, Postres, Productos de limpieza, etc. Al registrar un producto, asígnale una categoría para facilitar su búsqueda y organización dentro del catálogo.",
+    "categoria": "Productos"
+  },
+  {
+    "id": 71,
+    "pregunta": "¿Para qué sirve el módulo de compras?",
+    "respuesta": "El módulo de Compras permite registrar todas las adquisiciones realizadas a proveedores. Cuando se registra una compra, el sistema actualiza automáticamente el inventario disponible. También permite registrar proveedores, ver el historial de compras y registrar materia prima para negocios que elaboran sus propios productos.",
+    "categoria": "Compras"
+  },
+  {
+    "id": 72,
+    "pregunta": "¿Para qué sirve registrar proveedores en el sistema?",
+    "respuesta": "Registrar proveedores en InvoFact permite asociarlos a las compras de forma rápida y llevar un control de qué empresa suministra cada producto. Puedes registrar el nombre o razón social del proveedor, RUC, dirección, teléfono y correo. Al registrar una compra, simplemente seleccionas el proveedor del listado.",
+    "categoria": "Compras"
+  },
+  {
+    "id": 73,
+    "pregunta": "¿Para qué sirve el módulo de caja?",
+    "respuesta": "El módulo de Caja controla el flujo de dinero dentro del negocio durante la jornada laboral. Registra la apertura con el monto inicial, los ingresos de ventas (automático), ingresos adicionales (manual), egresos o gastos, y genera el cierre de caja con el resumen financiero del día. Facilita el cuadre de caja diario.",
+    "categoria": "Caja"
+  },
+  {
+    "id": 74,
+    "pregunta": "¿Qué es un ingreso de caja?",
+    "respuesta": "Un ingreso de caja es cualquier dinero que entra a la caja y que no proviene directamente de una venta registrada en el sistema. Por ejemplo: si el dueño agrega dinero adicional a la caja, se cobra un pago pendiente de un cliente, o se recibe algún otro ingreso externo. Se registra manualmente en el módulo de Caja.",
+    "categoria": "Caja"
+  },
+  {
+    "id": 75,
+    "pregunta": "¿Para qué sirve el módulo de reportes?",
+    "respuesta": "El módulo de Reportes permite analizar el rendimiento del negocio mediante informes detallados. Genera reportes de ventas, compras, facturación y productos más vendidos, todos filtrables por período y exportables a Excel. Es una herramienta clave para la toma de decisiones y para cumplir con obligaciones tributarias ante SUNAT.",
+    "categoria": "Reportes"
+  },
+  {
+    "id": 76,
+    "pregunta": "¿Qué información muestra el reporte de ventas?",
+    "respuesta": "El reporte de ventas muestra todas las transacciones comerciales realizadas en un período (días, semanas, meses o años). Incluye productos vendidos, cantidades, monto de cada venta y el total general generado. Permite analizar el rendimiento comercial, identificar tendencias y saber cuánto dinero está ingresando al negocio.",
+    "categoria": "Reportes"
+  },
+  {
+    "id": 77,
+    "pregunta": "¿Cómo configurar una impresora de cocina?",
+    "respuesta": "En el módulo de Ambientes (o Configuración), accede a la sección de Cocina. Ahí puedes configurar impresoras térmicas para la impresión automática de comandas. Cuando se registra un pedido, el sistema envía automáticamente la orden a la impresora de cocina configurada, ideal para restaurantes y negocios gastronómicos.",
+    "categoria": "Configuracion"
+  },
+  {
+    "id": 78,
+    "pregunta": "¿Cómo gestionar las mesas de un restaurante?",
+    "respuesta": "En el módulo de Ambientes, sección Mesas, puedes registrar todas las mesas disponibles en tu establecimiento. Las mesas cambian de estado automáticamente: aparecen como ocupadas cuando tienen un pedido activo y libres cuando el pedido se cierra. Esto permite a los meseros y cajeros tener una vista en tiempo real de la disponibilidad del salón.",
+    "categoria": "Configuracion"
+  }
+]

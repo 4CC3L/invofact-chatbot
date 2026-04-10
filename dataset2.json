@@ -1,0 +1,638 @@
+[
+  {
+    "id": 1,
+    "pregunta": "hola",
+    "respuesta": "Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",
+    "categoria": "saludo"
+  },
+  {
+    "id": 2,
+    "pregunta": "buenos dias",
+    "respuesta": "Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",
+    "categoria": "saludo"
+  },
+  {
+    "id": 3,
+    "pregunta": "buenas tardes",
+    "respuesta": "Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",
+    "categoria": "saludo"
+  },
+  {
+    "id": 4,
+    "pregunta": "buenas noches",
+    "respuesta": "Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",
+    "categoria": "saludo"
+  },
+  {
+    "id": 5,
+    "pregunta": "hola chatbot",
+    "respuesta": "Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",
+    "categoria": "saludo"
+  },
+  {
+    "id": 6,
+    "pregunta": "hola necesito ayuda",
+    "respuesta": "Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",
+    "categoria": "saludo"
+  },
+  {
+    "id": 7,
+    "pregunta": "alguien me ayuda",
+    "respuesta": "Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",
+    "categoria": "saludo"
+  },
+  {
+    "id": 8,
+    "pregunta": "hola soporte",
+    "respuesta": "Hola 👋 soy el asistente virtual de soporte de InvoFact. Puedo ayudarte con facturación, impresoras, ventas y configuración del sistema.",
+    "categoria": "saludo"
+  },
+  {
+    "id": 9,
+    "pregunta": "gracias",
+    "respuesta": "¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.",
+    "categoria": "despedida"
+  },
+  {
+    "id": 10,
+    "pregunta": "muchas gracias",
+    "respuesta": "¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.",
+    "categoria": "despedida"
+  },
+  {
+    "id": 11,
+    "pregunta": "ok gracias",
+    "respuesta": "¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.",
+    "categoria": "despedida"
+  },
+  {
+    "id": 12,
+    "pregunta": "perfecto gracias",
+    "respuesta": "¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.",
+    "categoria": "despedida"
+  },
+  {
+    "id": 13,
+    "pregunta": "eso es todo gracias",
+    "respuesta": "¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.",
+    "categoria": "despedida"
+  },
+  {
+    "id": 14,
+    "pregunta": "hasta luego",
+    "respuesta": "¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.",
+    "categoria": "despedida"
+  },
+  {
+    "id": 15,
+    "pregunta": "adios",
+    "respuesta": "¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.",
+    "categoria": "despedida"
+  },
+  {
+    "id": 16,
+    "pregunta": "nos vemos",
+    "respuesta": "¡Con gusto! Si necesitas más ayuda puedes volver a escribirme en cualquier momento.",
+    "categoria": "despedida"
+  },
+  {
+    "id": 17,
+    "pregunta": "quien eres",
+    "respuesta": "Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.",
+    "categoria": "smalltalk"
+  },
+  {
+    "id": 18,
+    "pregunta": "que puedes hacer",
+    "respuesta": "Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.",
+    "categoria": "smalltalk"
+  },
+  {
+    "id": 19,
+    "pregunta": "eres un bot",
+    "respuesta": "Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.",
+    "categoria": "smalltalk"
+  },
+  {
+    "id": 20,
+    "pregunta": "me puedes ayudar",
+    "respuesta": "Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.",
+    "categoria": "smalltalk"
+  },
+  {
+    "id": 21,
+    "pregunta": "como funciona este chat",
+    "respuesta": "Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.",
+    "categoria": "smalltalk"
+  },
+  {
+    "id": 22,
+    "pregunta": "que servicios ofrece el sistema",
+    "respuesta": "Soy un asistente virtual diseñado para ayudar con el sistema de facturación y soporte técnico.",
+    "categoria": "smalltalk"
+  },
+  {
+    "id": 23,
+    "pregunta": "¿Cómo puedo emitir factura?",
+    "respuesta": "Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 24,
+    "pregunta": "¿Cómo hago para emitir factura?",
+    "respuesta": "Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 25,
+    "pregunta": "¿Me puedes explicar cómo emitir factura?",
+    "respuesta": "Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 26,
+    "pregunta": "Necesito ayuda para emitir factura",
+    "respuesta": "Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 27,
+    "pregunta": "Tengo un problema para emitir factura",
+    "respuesta": "Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 28,
+    "pregunta": "¿Dónde puedo emitir factura?",
+    "respuesta": "Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 29,
+    "pregunta": "¿Cuál es el proceso para emitir factura?",
+    "respuesta": "Para emitir una factura en el sistema debe ingresar al módulo de ventas, seleccionar nueva factura, registrar los datos del cliente y confirmar el comprobante.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 30,
+    "pregunta": "¿Cómo puedo emitir boleta?",
+    "respuesta": "Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 31,
+    "pregunta": "¿Cómo hago para emitir boleta?",
+    "respuesta": "Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 32,
+    "pregunta": "¿Me puedes explicar cómo emitir boleta?",
+    "respuesta": "Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 33,
+    "pregunta": "Necesito ayuda para emitir boleta",
+    "respuesta": "Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 34,
+    "pregunta": "Tengo un problema para emitir boleta",
+    "respuesta": "Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 35,
+    "pregunta": "¿Dónde puedo emitir boleta?",
+    "respuesta": "Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 36,
+    "pregunta": "¿Cuál es el proceso para emitir boleta?",
+    "respuesta": "Para emitir una boleta debe ingresar al módulo ventas, seleccionar nueva boleta y completar la información del cliente y productos.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 37,
+    "pregunta": "¿Cómo puedo registrar productos?",
+    "respuesta": "Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 38,
+    "pregunta": "¿Cómo hago para registrar productos?",
+    "respuesta": "Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 39,
+    "pregunta": "¿Me puedes explicar cómo registrar productos?",
+    "respuesta": "Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 40,
+    "pregunta": "Necesito ayuda para registrar productos",
+    "respuesta": "Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 41,
+    "pregunta": "Tengo un problema para registrar productos",
+    "respuesta": "Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 42,
+    "pregunta": "¿Dónde puedo registrar productos?",
+    "respuesta": "Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 43,
+    "pregunta": "¿Cuál es el proceso para registrar productos?",
+    "respuesta": "Para registrar productos vaya al módulo inventario y seleccione agregar producto. Ingrese nombre, precio y categoría.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 44,
+    "pregunta": "¿Cómo puedo configurar impresora?",
+    "respuesta": "Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 45,
+    "pregunta": "¿Cómo hago para configurar impresora?",
+    "respuesta": "Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 46,
+    "pregunta": "¿Me puedes explicar cómo configurar impresora?",
+    "respuesta": "Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 47,
+    "pregunta": "Necesito ayuda para configurar impresora",
+    "respuesta": "Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 48,
+    "pregunta": "Tengo un problema para configurar impresora",
+    "respuesta": "Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 49,
+    "pregunta": "¿Dónde puedo configurar impresora?",
+    "respuesta": "Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 50,
+    "pregunta": "¿Cuál es el proceso para configurar impresora?",
+    "respuesta": "Para configurar la impresora térmica debe verificar el puerto USB o Bluetooth y configurarlo en el módulo de impresión.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 51,
+    "pregunta": "¿Cómo puedo error con SUNAT?",
+    "respuesta": "Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 52,
+    "pregunta": "¿Cómo hago para error con SUNAT?",
+    "respuesta": "Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 53,
+    "pregunta": "¿Me puedes explicar cómo error con SUNAT?",
+    "respuesta": "Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 54,
+    "pregunta": "Necesito ayuda para error con SUNAT",
+    "respuesta": "Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 55,
+    "pregunta": "Tengo un problema para error con SUNAT",
+    "respuesta": "Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 56,
+    "pregunta": "¿Dónde puedo error con SUNAT?",
+    "respuesta": "Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 57,
+    "pregunta": "¿Cuál es el proceso para error con SUNAT?",
+    "respuesta": "Si existe un error con SUNAT verifique su conexión a internet y que el certificado digital esté activo.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 58,
+    "pregunta": "¿Cómo puedo crear usuarios?",
+    "respuesta": "Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 59,
+    "pregunta": "¿Cómo hago para crear usuarios?",
+    "respuesta": "Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 60,
+    "pregunta": "¿Me puedes explicar cómo crear usuarios?",
+    "respuesta": "Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 61,
+    "pregunta": "Necesito ayuda para crear usuarios",
+    "respuesta": "Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 62,
+    "pregunta": "Tengo un problema para crear usuarios",
+    "respuesta": "Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 63,
+    "pregunta": "¿Dónde puedo crear usuarios?",
+    "respuesta": "Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 64,
+    "pregunta": "¿Cuál es el proceso para crear usuarios?",
+    "respuesta": "Para crear usuarios vaya a configuración del sistema y seleccione gestión de usuarios.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 65,
+    "pregunta": "¿Cómo puedo ver reportes?",
+    "respuesta": "Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 66,
+    "pregunta": "¿Cómo hago para ver reportes?",
+    "respuesta": "Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 67,
+    "pregunta": "¿Me puedes explicar cómo ver reportes?",
+    "respuesta": "Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 68,
+    "pregunta": "Necesito ayuda para ver reportes",
+    "respuesta": "Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 69,
+    "pregunta": "Tengo un problema para ver reportes",
+    "respuesta": "Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 70,
+    "pregunta": "¿Dónde puedo ver reportes?",
+    "respuesta": "Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 71,
+    "pregunta": "¿Cuál es el proceso para ver reportes?",
+    "respuesta": "Los reportes se pueden visualizar desde el módulo reportes y exportarse en PDF o Excel.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 72,
+    "pregunta": "¿Cómo puedo instalar sistema?",
+    "respuesta": "Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 73,
+    "pregunta": "¿Cómo hago para instalar sistema?",
+    "respuesta": "Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 74,
+    "pregunta": "¿Me puedes explicar cómo instalar sistema?",
+    "respuesta": "Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 75,
+    "pregunta": "Necesito ayuda para instalar sistema",
+    "respuesta": "Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 76,
+    "pregunta": "Tengo un problema para instalar sistema",
+    "respuesta": "Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 77,
+    "pregunta": "¿Dónde puedo instalar sistema?",
+    "respuesta": "Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 78,
+    "pregunta": "¿Cuál es el proceso para instalar sistema?",
+    "respuesta": "Para instalar el sistema debe descargar el instalador desde el portal y seguir los pasos del asistente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 79,
+    "pregunta": "¿Cómo puedo elminar usuarios?",
+    "respuesta": "Para eliminar un usuario debes ingresar al módulo de usuarios --> buscar el usuario en la lista --> seleccionar la opción eliminar o desactivar. Es recomendable desactivar usuarios que ya no trabajan en el negocio para mantener la seguridad del sistema.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 80,
+    "pregunta": "que es invofact?",
+    "respuesta": " InvoFact es un sistema de gestión empresarial que permite administrar ventas - inventarios - compras - facturación electrónica desde una sola plataforma.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 81,
+    "pregunta": "para que tipos de negocio sirve invofact?",
+    "respuesta": " InvoFact puede ser utilizado por restaurantes - cafeterias - bodegas - tiendas retail - minimarkets - ferreterias y prácticamente cualquier negocio que necesite controlar ventas e inventarios.",
+    "categoria": " soporte"
+  },
+  {
+    "id": 82,
+    "pregunta": "invofact esta conectado con SUNAT?",
+    "respuesta": " Si. El sistema se conecta directamente con los servidores de SUNAT para enviar y validar comprobantes electrónicos como boletas y facturas.",
+    "categoria": " soporte"
+  },
+  {
+    "id": 83,
+    "pregunta": "se puede usar invofact desde un celular?",
+    "respuesta": " Si. InvoFact cuenta con una aplicación móvil disponible para dispositivos Android que permite gestionar el negocio desde smartphones o tablets.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 84,
+    "pregunta": "invofact funciona sin internet?",
+    "respuesta": " Algunas funciones pueden operar temporalmente sin internet pero para enviar comprobantes electrónicos a SUNAT se requiere conexión a internet.",
+    "categoria": " soporte"
+  },
+  {
+    "id": 85,
+    "pregunta": "como puedo registrar un producto?",
+    "respuesta": " Debes ingresar al módulo de productos --> seleccionar la opción crear producto --> luego completar la información como nombre - precio - categoria - stock.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 86,
+    "pregunta": "como se realiza una venta?",
+    "respuesta": " Debes ingresar al módulo de ventas --> seleccionar los productos que el cliente desea comprar --> confirmar el pago para emitir el comprobante correspondiente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 87,
+    "pregunta": "que tipos de comprobantes se puede emitir?",
+    "respuesta": " El sistema permite emitir boletas electrónicas - facturas electrónicas - notas de crédito - notas de débito.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 88,
+    "pregunta": "que significa que un comprobante este rechazado?",
+    "respuesta": " Significa que SUNAT no aceptó el comprobante debido a errores en los datos o inconsistencias en la información enviada.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 89,
+    "pregunta": "Se puede enviar el comprobante por whatsapp?",
+    "respuesta": " Si. InvoFact permite enviar comprobantes digitales directamente al cliente mediante WhatsApp.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 90,
+    "pregunta": "que es un rol de usuario?",
+    "respuesta": " Un rol de usuario define los permisos que tiene una persona dentro del sistema. Un administrador puede acceder a todas las funciones del sistema - mientras que un cajero solo puede registrar ventas.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 91,
+    "pregunta": "cuantos usuarios puede tener el sistema?",
+    "respuesta": " El numero de usuarios depende del plan contratado del sistema. Sin embargo el sistema está diseñado para permitir multiples usuarios trabajando al mismo tiempo dentro del negocio. ",
+    "categoria": "soporte"
+  },
+  {
+    "id": 92,
+    "pregunta": "como modifico el precio de un producto?",
+    "respuesta": " Debes ingresar al módulo Productos --> buscar el producto que deseas modificar --> seleccionar la opción editar. Luego puedes cambiar el precio de venta y guardar los cambios.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 93,
+    "pregunta": "como elimino un producto?",
+    "respuesta": " Para eliminar un producto debes ingresar al módulo de productos --> seleccionar el producto en la lista --> elegir la opción eliminar. Algunos sistemas prefieren desactivar productos en lugar de eliminarlos para mantener el historial de ventas.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 94,
+    "pregunta": "que pasa si mi stock llega a cero?",
+    "respuesta": " Cuando el stock de un producto llega a cero significa que ya no hay unidades disponibles en inventario. El sistema puede mostrar una alerta para indicar que el producto debe ser reabastecido mediante una compra.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 95,
+    "pregunta": "como ver el inventario?",
+    "respuesta": " El inventario puede consultarse desde el módulo de productos. Alli se muestra la lista completa de productos junto con la cantidad disponible en stock.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 96,
+    "pregunta": "como aplicar descuentos?",
+    "respuesta": " Durante el proceso de venta el sistema permite aplicar descuentos antes de confirmar el pago. Solo debes ingresar el monto o porcentaje de descuento y el sistema recalculará el total automáticamente.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 97,
+    "pregunta": "como reimprimir un ticket?",
+    "respuesta": " Para reimprimir un ticket debes ingresar al historial de ventas o al módulo de facturación --> seleccionar la venta correspondiente --> elegir la opción reimprimir.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 98,
+    "pregunta": "como anular una venta?",
+    "respuesta": " Para anular una venta se debe emitir una nota de crédito o utilizar la opción de anulación disponible en el sistema - dependiendo del estado del comprobante.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 99,
+    "pregunta": "como registrar una compra?",
+    "respuesta": "Debes ingresar al módulo de compras --> seleccionar los productos adquiridos al proveedor --> registrar las cantidades --> confirmar la compra. El sistema actualizará automáticamente el inventario.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 100,
+    "pregunta": "como registrar un proveedor?",
+    "respuesta": "Para registrar un proveedor debes ingresar al módulo correspondiente y agregar la información básica como nombre de la empresa los cuales son RUC - teléfono - dirección.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 101,
+    "pregunta": "como es aperturar de caja?",
+    "respuesta": "La apertura de caja es el proceso mediante el cual se registra el dinero inicial con el que comenzará a operar la caja durante el dia.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 102,
+    "pregunta": "como es cierre de caja?",
+    "respuesta": "El cierre de caja consiste en revisar el dinero total registrado durante el dia y compararlo con el dinero fisico disponible para verificar que coincidan.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 103,
+    "pregunta": "como registrar un egreso?",
+    "respuesta": "Los egresos se registran cuando se retira dinero de la caja para pagar gastos del negocio - como compras - servicios o pagos menores.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 104,
+    "pregunta": "como generar reporte de ventas?",
+    "respuesta": "Debes ingresar al módulo de reportes --> seleccionar el reporte de ventas --> elegir el rango de fechas que deseas analizar.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 105,
+    "pregunta": "como exportar a excel?",
+    "respuesta": "Muchos reportes del sistema permiten exportar la información en formato Excel para facilitar su análisis o compartirla con el contador.",
+    "categoria": "soporte"
+  },
+  {
+    "id": 106,
+    "pregunta": "Ya tienes el cliente registrado?",
+    "respuesta": "Si: Entonces añade los productos --> verifica monto total y confirma la factura. No: Primero registra al cliente en el módulo Clientes --> Nuevo cliente.",
+    "categoria": "soporte"
+  }
+]

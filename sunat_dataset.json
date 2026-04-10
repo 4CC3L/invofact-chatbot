@@ -1,0 +1,1246 @@
+{
+  "metadata": {
+    "titulo": "Dataset maestro — Regímenes tributarios SUNAT Perú",
+    "version": "2.0",
+    "año_referencia": 2024,
+    "uit_2024": 5150,
+    "uit_2023": 4950,
+    "uit_2022": 4600,
+    "moneda": "Soles peruanos (PEN)",
+    "fuente_principal": "SUNAT — Superintendencia Nacional de Aduanas y de Administración Tributaria",
+    "base_legal_general": [
+      "Texto Único Ordenado de la Ley del Impuesto a la Renta — D.S. 179-2004-EF",
+      "Texto Único Ordenado de la Ley del IGV e ISC — D.S. 055-99-EF",
+      "Código Tributario — D.S. 133-2013-EF",
+      "Resolución de Superintendencia 203-2006/SUNAT (cronograma declaraciones)"
+    ],
+    "notas": [
+      "Los límites expresados en UIT se recalculan cada año según el valor de la UIT vigente.",
+      "Las tasas de IGV incluyen el 2% del Impuesto de Promoción Municipal (IPM).",
+      "El dataset incluye datos vigentes al 2024 y referencias históricas relevantes."
+    ]
+  },
+
+  "regimenes": [
+
+    {
+      "id": "NRUS",
+      "nombre_completo": "Nuevo Régimen Único Simplificado",
+      "nombre_corto": "Nuevo RUS",
+      "acronimo": "NRUS",
+      "base_legal": [
+        "Decreto Legislativo N° 937 (14/11/2003)",
+        "Decreto Legislativo N° 967 — modifica D.Leg. 937",
+        "Decreto Legislativo N° 1270 (20/12/2016) — vigente desde 01/01/2017"
+      ],
+      "descripcion": "Régimen simplificado dirigido a pequeños contribuyentes personas naturales y sucesiones indivisas domiciliadas, que realizan actividades de comercio y/o industria o de servicios. Pagan una cuota fija mensual que sustituye al IR e IGV.",
+      "tipo_contribuyente": [
+        "Persona natural con negocio",
+        "Sucesión indivisa domiciliada",
+        "Empresa individual de responsabilidad limitada (EIRL) — NO puede acogerse desde D.Leg. 1270"
+      ],
+      "quien_puede_acogerse": {
+        "descripcion": "Personas naturales y sucesiones indivisas domiciliadas que generen rentas de tercera categoría (de negocio), siempre que cumplan con todos los requisitos.",
+        "requisitos": [
+          "Sus ingresos brutos anuales no superen S/ 96,000 (equivalente a S/ 8,000 mensuales)",
+          "El valor de los activos fijos afectados a la actividad no supere S/ 70,000 (excluidos predios y vehículos)",
+          "Sus adquisiciones afectadas a la actividad no superen S/ 96,000 anuales",
+          "No tener más de un establecimiento o local",
+          "No realizar actividades excluidas del régimen"
+        ]
+      },
+      "quien_NO_puede_acogerse": [
+        "Personas jurídicas (SAC, SAA, SRL, etc.)",
+        "Sucursales o agencias de empresas no domiciliadas",
+        "Quienes presten servicios de transporte de carga con vehículos de capacidad mayor o igual a 2 TM",
+        "Quienes presten servicios de transporte terrestre nacional o internacional de pasajeros",
+        "Quienes efectúen y/o tramiten cualquier régimen, operación o destino aduanero (salvo importación y/o exportación simplificada)",
+        "Quienes organicen cualquier tipo de espectáculo público",
+        "Notarios, martilleros, comisionistas, rematadores, agentes corredores de productos, de bolsa de valores y operadores especiales que realizan actividades en la Bolsa de Productos",
+        "Directores de empresas, síndicos, mandatarios, gestores de negocios, albaceas o similares",
+        "Titulares de negocios de casinos, tragamonedas u otros juegos de azar",
+        "Titulares de agencias de viaje, propaganda y/o publicidad",
+        "Quienes realizan venta de inmuebles",
+        "Quienes desarrollan actividades de comercialización de combustibles líquidos y otros productos derivados de los hidrocarburos",
+        "Quienes entreguen bienes en consignación",
+        "Quienes presten servicios de depósitos aduaneros y terminales de almacenamiento",
+        "Quienes realicen alguna de las operaciones gravadas con el ISC",
+        "Quienes tengan ingresos o adquisiciones que superen el límite mensual o anual"
+      ],
+      "categorias": [
+        {
+          "categoria": 1,
+          "descripcion": "Categoría 1",
+          "limite_ingresos_brutos_mensuales_soles": 5000,
+          "limite_adquisiciones_mensuales_soles": 5000,
+          "cuota_mensual_soles": 20,
+          "igv_sustituido": true,
+          "ir_sustituido": true
+        },
+        {
+          "categoria": 2,
+          "descripcion": "Categoría 2",
+          "limite_ingresos_brutos_mensuales_soles": 8000,
+          "limite_adquisiciones_mensuales_soles": 8000,
+          "cuota_mensual_soles": 50,
+          "igv_sustituido": true,
+          "ir_sustituido": true
+        },
+        {
+          "categoria": "ESPECIAL",
+          "descripcion": "Categoría especial (cuota cero)",
+          "aplica_a": [
+            "Contribuyentes ubicados en la Amazonía (Ley 27037) que realicen actividades de producción agrícola",
+            "Productores agrarios cuyas ventas anuales no superen 5 UIT"
+          ],
+          "cuota_mensual_soles": 0,
+          "nota": "Deben presentar igualmente la declaración mensual"
+        }
+      ],
+      "tributos_que_paga": {
+        "cuota_nrus": {
+          "descripcion": "Cuota fija mensual que sustituye al IR e IGV",
+          "calculo": "Cuota fija según categoría (S/ 20 o S/ 50 mensual)",
+          "periodicidad": "Mensual",
+          "sustituye_igv": true,
+          "sustituye_ir": true
+        },
+        "igv": {
+          "obligado": false,
+          "descripcion": "NO están obligados a declarar ni pagar IGV de forma separada. La cuota lo sustituye."
+        },
+        "impuesto_a_la_renta": {
+          "obligado": false,
+          "descripcion": "NO están obligados a presentar declaración anual de renta."
+        }
+      },
+      "declaraciones": {
+        "mensual": {
+          "obligatoria": true,
+          "formulario": "Formulario Virtual N° 1611 o Declara Fácil 621 (categoría especial)",
+          "contenido": "Declaración y pago de la cuota mensual del NRUS",
+          "medio": ["SUNAT Virtual", "Agente bancario autorizado", "Oficinas SUNAT"],
+          "nota": "Aunque no haya ventas en el mes, debe declararse"
+        },
+        "anual": {
+          "obligatoria": false,
+          "descripcion": "Los contribuyentes del NRUS NO están obligados a presentar Declaración Jurada Anual de Renta."
+        }
+      },
+      "cronograma_vencimientos": {
+        "descripcion": "El vencimiento mensual depende del último dígito del RUC según cronograma publicado por SUNAT",
+        "referencia": "Resolución de Superintendencia 203-2006/SUNAT y actualizaciones anuales",
+        "ejemplo_2024": {
+          "digito_0": "Último día hábil del mes",
+          "digito_1": "Día 10 del mes siguiente",
+          "digito_2": "Día 11 del mes siguiente",
+          "digito_3": "Día 12 del mes siguiente",
+          "digito_4": "Día 13 del mes siguiente",
+          "digito_5": "Día 14 del mes siguiente",
+          "digito_6": "Día 15 del mes siguiente",
+          "digito_7": "Día 16 del mes siguiente",
+          "digito_8": "Día 17 del mes siguiente",
+          "digito_9": "Día 18 del mes siguiente",
+          "buenos_contribuyentes": "Día 19 del mes siguiente o último hábil del mes"
+        }
+      },
+      "comprobantes_que_puede_emitir": [
+        "Boletas de venta",
+        "Tickets de máquina registradora que no permitan ejercer derecho al crédito fiscal ni sustentar gastos",
+        "Notas de crédito (vinculadas a boletas de venta)",
+        "Notas de débito (vinculadas a boletas de venta)"
+      ],
+      "comprobantes_que_NO_puede_emitir": [
+        "Facturas",
+        "Liquidaciones de compra",
+        "Guías de remisión remitente (sí puede emitir guía de remisión transportista)"
+      ],
+      "libros_contables": {
+        "obligatorio": false,
+        "descripcion": "Los contribuyentes del Nuevo RUS NO están obligados a llevar libros contables."
+      },
+      "igv_credito_fiscal": {
+        "puede_usar": false,
+        "descripcion": "NO pueden hacer uso del crédito fiscal del IGV."
+      },
+      "cambio_de_regimen": {
+        "puede_cambiar_a": ["RER", "RMT", "Régimen General"],
+        "momento_cambio": {
+          "al_inicio_año": "Puede acogerse al RER, RMT o RG desde el primer período del año (enero) con la primera declaración.",
+          "durante_año": "Puede cambiar al RER, RMT o RG en cualquier período mensual (desde el primer día del mes)."
+        },
+        "cuando_es_excluido": [
+          "Cuando en cualquier mes sus ingresos brutos o sus adquisiciones superen los límites de la Categoría 2 (S/ 8,000 mensuales)",
+          "Cuando incurra en alguno de los supuestos de exclusión del régimen",
+          "Al superar los límites, debe incorporarse al RER, RMT o RG según corresponda"
+        ]
+      },
+      "infracciones_tipicas": [
+        {
+          "infraccion": "No pagar la cuota mensual dentro del plazo",
+          "consecuencia": "Multa e intereses moratorios (TIM: 0.03% diario sobre el tributo no pagado)"
+        },
+        {
+          "infraccion": "No presentar la declaración mensual",
+          "consecuencia": "Multa: 1 UIT (puede reducirse por gradualidad hasta 90%)"
+        },
+        {
+          "infraccion": "Emitir facturas estando en el NRUS",
+          "consecuencia": "Cierre de establecimiento (desde primera vez: 1 día)"
+        }
+      ],
+      "ventajas": [
+        "Cuota fija muy baja (S/ 20 o S/ 50 mensuales)",
+        "No se llevan libros contables",
+        "No se presenta declaración anual",
+        "Trámites simplificados",
+        "Ideal para micronegocios con ventas pequeñas"
+      ],
+      "desventajas": [
+        "No puede emitir facturas (no puede vender a empresas que necesiten crédito fiscal)",
+        "No puede usar el crédito fiscal del IGV",
+        "Límite de ingresos muy bajo (S/ 96,000 anuales)",
+        "No puede tener más de un establecimiento",
+        "Actividades muy restringidas"
+      ],
+      "casos_practicos": [
+        {
+          "id": "NRUS_CASO_01",
+          "descripcion": "Vendedor de ropa en mercado — ventas mensuales S/ 3,500",
+          "ingresos_mensuales": 3500,
+          "categoria_aplica": 1,
+          "cuota_a_pagar": 20,
+          "igv_a_pagar": 0,
+          "ir_a_pagar": 0,
+          "total_impuestos_mes": 20,
+          "puede_emitir_factura": false,
+          "lleva_libros": false
+        },
+        {
+          "id": "NRUS_CASO_02",
+          "descripcion": "Peluquero independiente — ventas mensuales S/ 7,000",
+          "ingresos_mensuales": 7000,
+          "categoria_aplica": 2,
+          "cuota_a_pagar": 50,
+          "igv_a_pagar": 0,
+          "ir_a_pagar": 0,
+          "total_impuestos_mes": 50,
+          "puede_emitir_factura": false,
+          "lleva_libros": false
+        },
+        {
+          "id": "NRUS_CASO_03",
+          "descripcion": "Vendedora de alimentos preparados — ventas S/ 8,500/mes — SUPERA LÍMITE",
+          "ingresos_mensuales": 8500,
+          "alerta": "Supera el límite de S/ 8,000 mensual. Debe cambiar al RER, RMT o Régimen General.",
+          "accion_requerida": "Incorporarse al RER, RMT o RG desde ese período"
+        }
+      ],
+      "preguntas_frecuentes": [
+        {
+          "pregunta": "¿Puedo estar en el Nuevo RUS si tengo trabajadores en planilla?",
+          "respuesta": "El NRUS no establece un límite de trabajadores, pero sí establece límites de ingresos. Sin embargo, si tienes trabajadores, probablemente tus ingresos superarán los límites del NRUS. Además, como empleador deberás retener y declarar las contribuciones de EsSalud, ONP o AFP, lo que implica obligaciones adicionales independientes del régimen de renta."
+        },
+        {
+          "pregunta": "¿Puedo exportar estando en el Nuevo RUS?",
+          "respuesta": "Sí, el D.Leg. 1270 permite realizar exportaciones definitivas, bajo las normas del Reglamento de Exportación Simplificada. Sin embargo, las exportaciones no pueden superar el límite anual de S/ 96,000."
+        },
+        {
+          "pregunta": "¿Qué pasa si no declaro en un mes porque no tuve ventas?",
+          "respuesta": "Igualmente debes presentar la declaración mensual con S/ 0 de ingresos. Si no lo haces, incurres en la infracción del artículo 176 numeral 1 del Código Tributario (no presentar declaraciones en el plazo establecido), con multa de 1 UIT, reducida por gradualidad."
+        },
+        {
+          "pregunta": "¿Puedo cambiar de categoría dentro del NRUS?",
+          "respuesta": "Sí. Si tus ingresos o adquisiciones de un mes superan el límite de tu categoría actual, debes recategorizarte desde ese período. La recategorización se realiza marcando la nueva categoría en la declaración mensual."
+        },
+        {
+          "pregunta": "¿El NRUS cubre el pago de EsSalud?",
+          "respuesta": "No. La cuota del NRUS solo sustituye al IGV y al IR. Si tienes trabajadores, deberás pagar EsSalud (9% de la remuneración) y las contribuciones a AFP u ONP de forma independiente."
+        }
+      ]
+    },
+
+    {
+      "id": "RER",
+      "nombre_completo": "Régimen Especial del Impuesto a la Renta",
+      "nombre_corto": "RER",
+      "acronimo": "RER",
+      "base_legal": [
+        "Ley del Impuesto a la Renta — Capítulo XV (Arts. 117-124-A)",
+        "Decreto Legislativo N° 968 (24/12/2006)",
+        "D.S. 179-2004-EF — TUO de la Ley del IR",
+        "D.S. 122-94-EF — Reglamento de la Ley del IR (Capítulo XV)"
+      ],
+      "descripcion": "Régimen tributario dirigido a personas naturales, jurídicas, sucesiones indivisas y sociedades conyugales domiciliadas en el Perú que obtengan rentas de tercera categoría (de negocio) provenientes de actividades de comercio, industria y/o servicios. Pagan una tasa mensual fija del 1.5% de los ingresos netos, en sustitución del IR. Sí pagan IGV.",
+      "tipo_contribuyente": [
+        "Persona natural con negocio (tercera categoría)",
+        "Persona jurídica (SAC, SRL, SAA, EIRL, etc.)",
+        "Sucesión indivisa domiciliada",
+        "Sociedad conyugal"
+      ],
+      "quien_puede_acogerse": {
+        "descripcion": "Contribuyentes que generen rentas de tercera categoría siempre que sus ingresos netos anuales no superen S/ 525,000 y el valor de sus activos fijos (excepto predios y vehículos) no supere S/ 126,000.",
+        "requisitos": [
+          "Ingresos netos anuales no superiores a S/ 525,000",
+          "Valor de activos fijos (excepto predios y vehículos) no superior a S/ 126,000",
+          "Número de trabajadores por turno no superior a 10",
+          "No realizar actividades excluidas del régimen"
+        ]
+      },
+      "quien_NO_puede_acogerse": [
+        "Quienes realicen actividades calificadas como contratos de construcción según las normas del IGV",
+        "Quienes presten servicios de transporte de carga con vehículos de capacidad mayor o igual a 2 TM",
+        "Quienes realicen o tramiten cualquier régimen aduanero (salvo exportación definitiva simplificada)",
+        "Quienes organicen cualquier tipo de espectáculo público",
+        "Notarios, martilleros, comisionistas y demás agentes mediadores de comercio",
+        "Quienes sean titulares de negocios de casinos, tragamonedas u otros juegos de azar",
+        "Quienes sean titulares de agencias de viaje, propaganda y/o publicidad",
+        "Quienes desarrollen actividades de construcción",
+        "Empresas que obtengan rentas de fuente extranjera",
+        "Quienes tengan vinculación directa o indirecta en función al capital con otras personas naturales o jurídicas y cuyos ingresos netos anuales en conjunto superen S/ 525,000",
+        "Sucursales, agencias o cualquier otro establecimiento permanente de empresas no domiciliadas"
+      ],
+      "tributos_que_paga": {
+        "impuesto_a_la_renta": {
+          "tasa": "1.5% mensual sobre ingresos netos",
+          "descripcion": "Tasa mensual que sustituye el pago del IR anual. No existe regularización anual para el IR en el RER.",
+          "base_calculo": "Ingresos netos del período (ingresos brutos menos descuentos, bonificaciones, devoluciones concedidas)",
+          "periodicidad": "Mensual",
+          "es_pago_definitivo": true,
+          "tiene_regularizacion_anual": false
+        },
+        "igv": {
+          "obligado": true,
+          "tasa_total": "18%",
+          "desglose": {
+            "igv_propiamente_dicho": "16%",
+            "impuesto_promocion_municipal_ipm": "2%"
+          },
+          "credito_fiscal": "Sí puede usar el crédito fiscal del IGV",
+          "descripcion": "Pagan IGV mensual sobre ventas. Pueden usar el crédito fiscal de sus compras.",
+          "periodicidad": "Mensual",
+          "formulario": "PDT 621 o Declara Fácil 621"
+        }
+      },
+      "declaraciones": {
+        "mensual": {
+          "obligatoria": true,
+          "formulario": "PDT 621 o Declara Fácil 621",
+          "contenido": "Declaración mensual de IGV e IR (tasa del 1.5%)",
+          "medio": ["SUNAT Virtual (SOL)", "Agentes bancarios autorizados"],
+          "cronograma": "Según último dígito de RUC, igual que el NRUS"
+        },
+        "anual": {
+          "obligatoria": false,
+          "descripcion": "Los contribuyentes del RER NO presentan Declaración Jurada Anual de Renta de Tercera Categoría.",
+          "excepcion": "Si en algún período del año generaron rentas distintas a las del RER (rentas de primera, segunda, cuarta o quinta categoría como personas naturales), sí pueden estar obligados a declarar esas rentas."
+        }
+      },
+      "libros_contables": {
+        "obligatorio": true,
+        "libros_requeridos": [
+          {
+            "libro": "Registro de Compras",
+            "base_legal": "Art. 65 LIR y Resolución de Superintendencia 234-2006/SUNAT"
+          },
+          {
+            "libro": "Registro de Ventas e Ingresos",
+            "base_legal": "Art. 65 LIR y Resolución de Superintendencia 234-2006/SUNAT"
+          }
+        ],
+        "descripcion": "Solo están obligados a llevar Registro de Compras y Registro de Ventas. No llevan Libro Diario, Mayor, Inventarios ni balances.",
+        "formato": "Puede llevarse en formato físico o electrónico (SLE-PLE)"
+      },
+      "comprobantes_que_puede_emitir": [
+        "Facturas (permite crédito fiscal al comprador)",
+        "Boletas de venta",
+        "Tickets de máquina registradora",
+        "Notas de crédito",
+        "Notas de débito",
+        "Guías de remisión remitente"
+      ],
+      "igv_credito_fiscal": {
+        "puede_usar": true,
+        "descripcion": "Sí pueden usar el crédito fiscal del IGV de sus compras y adquisiciones, sustentado con facturas o liquidaciones de compra."
+      },
+      "cambio_de_regimen": {
+        "puede_cambiar_a": ["RMT", "Régimen General"],
+        "puede_cambiar_desde": ["Nuevo RUS", "RMT", "Régimen General"],
+        "acogimiento": {
+          "nueva_empresa": "Al momento de inscribirse en el RUC, en la declaración jurada de inicio de actividades.",
+          "empresa_existente_de_otro_regimen": "Con ocasión de la declaración y pago correspondiente al período de enero de cada año.",
+          "cambio_durante_año": "Puede incorporarse cuando en el transcurso del año sus ingresos superen los límites del NRUS pero no del RER."
+        },
+        "exclusion_automatica": [
+          "Cuando en cualquier período sus ingresos netos superen S/ 525,000 en el año",
+          "Cuando el valor de sus activos fijos supere S/ 126,000",
+          "Cuando sus adquisiciones superen S/ 525,000 anuales",
+          "Cuando tengan más de 10 trabajadores por turno",
+          "Cuando realicen actividades no permitidas en el RER",
+          "Al ser excluido, pasa automáticamente al Régimen General"
+        ]
+      },
+      "casos_practicos": [
+        {
+          "id": "RER_CASO_01",
+          "descripcion": "Bodega (tienda de abarrotes) — Ventas mensuales S/ 25,000 — Compras S/ 18,000",
+          "ingresos_brutos_mes": 25000,
+          "ingresos_netos_mes": 25000,
+          "compras_mes": 18000,
+          "ir_mensual": {
+            "calculo": "1.5% × S/ 25,000",
+            "monto": 375
+          },
+          "igv_mensual": {
+            "igv_ventas": 4500,
+            "igv_compras_credito_fiscal": 3240,
+            "igv_a_pagar": 1260
+          },
+          "total_impuestos_mes": 1635,
+          "puede_emitir_factura": true,
+          "libros_obligatorios": ["Registro de Compras", "Registro de Ventas"]
+        },
+        {
+          "id": "RER_CASO_02",
+          "descripcion": "Consultora de servicios de TI — Ingresos S/ 40,000 mensuales — Sin compras significativas",
+          "ingresos_netos_mes": 40000,
+          "compras_mes": 5000,
+          "ir_mensual": {
+            "calculo": "1.5% × S/ 40,000",
+            "monto": 600
+          },
+          "igv_mensual": {
+            "igv_ventas": 7200,
+            "igv_compras_credito_fiscal": 900,
+            "igv_a_pagar": 6300
+          },
+          "total_impuestos_mes": 6900,
+          "nota": "Alta carga del IGV por pocas compras con IGV. Evaluar si conviene RMT con deducción de gastos."
+        }
+      ],
+      "preguntas_frecuentes": [
+        {
+          "pregunta": "¿El 1.5% en el RER es un pago a cuenta o es definitivo?",
+          "respuesta": "Es un pago definitivo. A diferencia del Régimen General o el RMT, en el RER no existe regularización anual del IR. El 1.5% mensual sobre ingresos netos es el impuesto final, sin importar cuál sea la utilidad real del negocio."
+        },
+        {
+          "pregunta": "¿Puedo deducir gastos en el RER?",
+          "respuesta": "No directamente. El IR en el RER se calcula sobre ingresos netos (no sobre utilidad), por lo que no se deducen gastos para determinar el IR. Sin embargo, sí puedes usar el crédito fiscal del IGV de tus compras para reducir el IGV a pagar."
+        },
+        {
+          "pregunta": "¿Qué pasa si mis ingresos superan S/ 525,000 en el año?",
+          "respuesta": "Eres excluido automáticamente del RER a partir del período en que se produjo el exceso. Debes incorporarte al Régimen MYPE Tributario o al Régimen General desde ese mes, cumpliendo las obligaciones correspondientes."
+        },
+        {
+          "pregunta": "¿En el RER puedo contratar empleados?",
+          "respuesta": "Sí, pero no puedes exceder 10 trabajadores por turno. Si tienes más, debes cambiar al RMT o Régimen General. Además, deberás cumplir con las obligaciones laborales: planilla, EsSalud, AFP/ONP, independientemente del régimen tributario."
+        },
+        {
+          "pregunta": "¿Puedo emitir facturas electrónicas en el RER?",
+          "respuesta": "Sí. Los contribuyentes del RER están obligados a emitir comprobantes electrónicos si así lo dispone SUNAT. Dependiendo de su nivel de ingresos o actividad, pueden estar sujetos a la obligación de emitir Facturas Electrónicas y Boletas de Venta Electrónicas a través del sistema SEE."
+        }
+      ]
+    },
+
+    {
+      "id": "RMT",
+      "nombre_completo": "Régimen MYPE Tributario del Impuesto a la Renta",
+      "nombre_corto": "Régimen MYPE Tributario",
+      "acronimo": "RMT",
+      "base_legal": [
+        "Decreto Legislativo N° 1269 (20/12/2016) — vigente desde 01/01/2017",
+        "Decreto Supremo N° 403-2016-EF — Reglamento del D.Leg. 1269",
+        "D.S. 179-2004-EF — TUO de la Ley del IR (aplicación supletoria)"
+      ],
+      "descripcion": "Régimen creado para las Micro y Pequeñas Empresas (MYPE). Permite pagar el IR sobre la renta neta (utilidad) con tasas progresivas reducidas. Aplica a contribuyentes con ingresos netos anuales hasta 1,700 UIT. Pagan IGV normalmente y presentan declaración anual.",
+      "tipo_contribuyente": [
+        "Persona natural con negocio (tercera categoría)",
+        "Persona jurídica domiciliada en Perú",
+        "Sucesión indivisa domiciliada",
+        "Asociaciones de hecho de profesionales",
+        "Sociedad conyugal"
+      ],
+      "quien_puede_acogerse": {
+        "descripcion": "Contribuyentes domiciliados en Perú que perciban rentas de tercera categoría, cuyos ingresos netos no superen las 1,700 UIT en el ejercicio gravable.",
+        "limite_ingresos_anuales_uit": 1700,
+        "limite_ingresos_anuales_soles_2024": 8755000,
+        "requisitos": [
+          "Ingresos netos anuales no superiores a 1,700 UIT",
+          "No tener vinculación directa o indirecta con otras personas naturales o jurídicas cuyos ingresos netos anuales en conjunto superen 1,700 UIT",
+          "No ser sucursal, agencia o establecimiento permanente de empresas constituidas en el exterior",
+          "No haber obtenido en el ejercicio gravable anterior ingresos netos superiores a 1,700 UIT"
+        ]
+      },
+      "tributos_que_paga": {
+        "impuesto_a_la_renta": {
+          "descripcion": "Se calcula sobre la renta neta imponible (utilidad neta después de deducciones) con tasas progresivas.",
+          "tasas_progresivas": [
+            {
+              "tramo": "Hasta 15 UIT de renta neta",
+              "limite_soles_2024": 77250,
+              "tasa": "10%"
+            },
+            {
+              "tramo": "Más de 15 UIT de renta neta",
+              "tasa": "29.5%"
+            }
+          ],
+          "pagos_a_cuenta_mensual": {
+            "descripcion": "Los contribuyentes del RMT realizan pagos a cuenta mensuales que se regularizan en la declaración anual.",
+            "tasa_hasta_300_uit_ingresos": "1% de los ingresos netos mensuales",
+            "tasa_mas_de_300_uit_ingresos": "1.5% de los ingresos netos mensuales o coeficiente (el que sea mayor)",
+            "nota_300_uit_2024": "300 UIT 2024 = S/ 1,545,000",
+            "formula_coeficiente": "IR calculado del año anterior / Ingresos netos del año anterior"
+          },
+          "periodicidad_pago_a_cuenta": "Mensual",
+          "regularizacion_anual": true,
+          "formulario_anual": "PDT 710 o Formulario Virtual 710"
+        },
+        "igv": {
+          "obligado": true,
+          "tasa_total": "18%",
+          "desglose": {
+            "igv_propiamente_dicho": "16%",
+            "impuesto_promocion_municipal_ipm": "2%"
+          },
+          "credito_fiscal": "Sí puede usar el crédito fiscal del IGV",
+          "periodicidad": "Mensual",
+          "formulario": "PDT 621 o Declara Fácil 621"
+        }
+      },
+      "declaraciones": {
+        "mensual": {
+          "obligatoria": true,
+          "formulario": "PDT 621 o Declara Fácil 621",
+          "contenido": "IGV + Pago a cuenta del IR",
+          "cronograma": "Según último dígito del RUC"
+        },
+        "anual": {
+          "obligatoria": true,
+          "formulario": "PDT 710 o Formulario Virtual 710",
+          "plazo": "Según cronograma SUNAT (generalmente marzo-abril del año siguiente)",
+          "descripcion": "Declaración Jurada Anual de Renta de Tercera Categoría. Se regulariza el IR anual."
+        }
+      },
+      "libros_contables": {
+        "obligatorio": true,
+        "criterio": "Según nivel de ingresos",
+        "tramos": [
+          {
+            "nivel": "Hasta 300 UIT de ingresos netos anuales",
+            "soles_2024": 1545000,
+            "libros": [
+              "Registro de Ventas e Ingresos",
+              "Registro de Compras",
+              "Libro Diario de Formato Simplificado"
+            ]
+          },
+          {
+            "nivel": "Más de 300 UIT hasta 500 UIT de ingresos netos anuales",
+            "soles_2024_desde": 1545000,
+            "soles_2024_hasta": 2575000,
+            "libros": [
+              "Registro de Ventas e Ingresos",
+              "Registro de Compras",
+              "Libro Diario",
+              "Libro Mayor"
+            ]
+          },
+          {
+            "nivel": "Más de 500 UIT hasta 1,700 UIT de ingresos netos anuales",
+            "soles_2024_desde": 2575000,
+            "soles_2024_hasta": 8755000,
+            "libros": [
+              "Registro de Ventas e Ingresos",
+              "Registro de Compras",
+              "Libro Diario",
+              "Libro Mayor",
+              "Libro de Inventarios y Balances"
+            ]
+          }
+        ]
+      },
+      "comprobantes_que_puede_emitir": [
+        "Facturas",
+        "Boletas de venta",
+        "Tickets de máquina registradora",
+        "Liquidaciones de compra",
+        "Notas de crédito",
+        "Notas de débito",
+        "Guías de remisión remitente",
+        "Recibos por honorarios (si aplica)"
+      ],
+      "deducciones_y_gastos": {
+        "descripcion": "A diferencia del RER, en el RMT el IR se calcula sobre la utilidad neta, por lo que los gastos necesarios para generar la renta son deducibles, sujetos al principio de causalidad.",
+        "gastos_deducibles_principales": [
+          "Planilla y beneficios sociales de trabajadores",
+          "Alquileres de local y equipos",
+          "Compra de materiales e insumos",
+          "Servicios de terceros (luz, agua, teléfono, internet relacionados al negocio)",
+          "Depreciación de activos fijos",
+          "Intereses de préstamos vinculados al negocio",
+          "Gastos de representación (hasta el 0.5% de los ingresos netos, máximo 40 UIT)",
+          "Publicidad y marketing",
+          "Seguros vinculados al negocio",
+          "Servicios profesionales y de contabilidad"
+        ],
+        "principio_causalidad": "Solo son deducibles los gastos necesarios para producir renta y mantener la fuente, que estén debidamente documentados con comprobantes de pago."
+      },
+      "cambio_de_regimen": {
+        "puede_cambiar_desde": ["Nuevo RUS", "RER", "Régimen General"],
+        "puede_cambiar_a": ["Régimen General"],
+        "acogimiento": {
+          "nueva_empresa": "Acogimiento al momento de inscripción en el RUC.",
+          "desde_otro_regimen": "Con la presentación de la declaración del mes de enero."
+        },
+        "exclusion_automatica": [
+          "Cuando los ingresos netos anuales superen 1,700 UIT",
+          "Pasa automáticamente al Régimen General desde el período siguiente al que superó el límite"
+        ]
+      },
+      "casos_practicos": [
+        {
+          "id": "RMT_CASO_01",
+          "descripcion": "Empresa de servicios — Ingresos anuales S/ 300,000 — Gastos deducibles S/ 200,000",
+          "ingresos_netos_anuales": 300000,
+          "gastos_deducibles": 200000,
+          "renta_neta_imponible": 100000,
+          "calculo_ir_anual": {
+            "15_uit_2024": 77250,
+            "tramo_1": {
+              "base": 77250,
+              "tasa": "10%",
+              "impuesto": 7725
+            },
+            "tramo_2": {
+              "base": 22750,
+              "tasa": "29.5%",
+              "impuesto": 6711.25
+            },
+            "ir_total_anual": 14436.25
+          },
+          "pagos_a_cuenta_mensuales": {
+            "tasa": "1%",
+            "promedio_mensual": 2500,
+            "total_pagos_a_cuenta": 30000
+          },
+          "regularizacion_anual": {
+            "ir_calculado_anual": 14436.25,
+            "menos_pagos_a_cuenta": 30000,
+            "resultado": "Saldo a favor del contribuyente: S/ 15,563.75"
+          }
+        },
+        {
+          "id": "RMT_CASO_02",
+          "descripcion": "Ferretería — Ingresos anuales S/ 500,000 — Gastos S/ 380,000",
+          "ingresos_netos_anuales": 500000,
+          "gastos_deducibles": 380000,
+          "renta_neta_imponible": 120000,
+          "calculo_ir_anual": {
+            "tramo_1": {
+              "base": 77250,
+              "tasa": "10%",
+              "impuesto": 7725
+            },
+            "tramo_2": {
+              "base": 42750,
+              "tasa": "29.5%",
+              "impuesto": 12611.25
+            },
+            "ir_total_anual": 20336.25
+          }
+        }
+      ],
+      "preguntas_frecuentes": [
+        {
+          "pregunta": "¿Cuál es la diferencia principal entre el RMT y el RER?",
+          "respuesta": "En el RER pagas el 1.5% de tus ingresos sin importar si tienes pérdida o ganancia, y es un pago definitivo (sin declaración anual). En el RMT pagas el IR sobre tu utilidad real con tasas del 10% y 29.5%, deduces gastos, y realizas una declaración anual que puede generar saldo a favor si los pagos a cuenta fueron excesivos. El RMT es más conveniente cuando tienes muchos gastos deducibles."
+        },
+        {
+          "pregunta": "¿Qué pasa si tuve pérdida en el año dentro del RMT?",
+          "respuesta": "Si el resultado del ejercicio es pérdida (gastos mayores que ingresos), no pagas IR anual. Además, puedes arrastrar esa pérdida para compensarla con utilidades de años posteriores, según el sistema A (hasta 4 años) o sistema B (hasta el 50% de la renta neta de cada ejercicio siguiente)."
+        },
+        {
+          "pregunta": "¿Cuándo conviene el RMT frente al Régimen General?",
+          "respuesta": "Si tus ingresos anuales no superan 1,700 UIT, el RMT siempre es más conveniente que el Régimen General, ya que tiene exactamente las mismas ventajas (deducción de gastos, declaración anual) pero con tasas de IR reducidas para los primeros 15 UIT de renta neta (10% vs 29.5%). No hay razón económica para estar en RG teniendo ingresos dentro del límite del RMT."
+        },
+        {
+          "pregunta": "¿Los pagos a cuenta del 1% son obligatorios aunque no tenga utilidad?",
+          "respuesta": "Sí. Los pagos a cuenta mensuales del RMT (1% para contribuyentes con hasta 300 UIT de ingresos) son obligatorios independientemente de si el negocio tuvo ganancia o pérdida en el mes. Lo que sí puede ajustarse es el coeficiente a partir de agosto, si el balance del semestre muestra pérdidas, mediante la suspensión o modificación del pago a cuenta."
+        }
+      ]
+    },
+
+    {
+      "id": "RG",
+      "nombre_completo": "Régimen General del Impuesto a la Renta",
+      "nombre_corto": "Régimen General",
+      "acronimo": "RG",
+      "base_legal": [
+        "Texto Único Ordenado de la Ley del Impuesto a la Renta — D.S. 179-2004-EF",
+        "Reglamento de la Ley del IR — D.S. 122-94-EF y modificatorias",
+        "Código Tributario — D.S. 133-2013-EF",
+        "Ley del IGV e ISC — D.S. 055-99-EF"
+      ],
+      "descripcion": "Régimen general aplicable a todo contribuyente que genere rentas de tercera categoría. No tiene límite de ingresos. Paga el IR sobre la renta neta imponible a una tasa del 29.5% y el IGV del 18%. Presenta declaración mensual y anual. Puede deducir todos los gastos necesarios para generar renta.",
+      "tipo_contribuyente": [
+        "Personas naturales con negocio",
+        "Personas jurídicas (SAC, SAA, SRL, EIRL, Cooperativas, etc.)",
+        "Sucesiones indivisas",
+        "Sociedades conyugales",
+        "Asociaciones de hecho de profesionales",
+        "Sucursales y agencias de empresas no domiciliadas",
+        "Cualquier contribuyente que supere los límites del RER o RMT"
+      ],
+      "tributos_que_paga": {
+        "impuesto_a_la_renta": {
+          "tasa": "29.5% sobre la renta neta imponible",
+          "descripcion": "Tasa única del 29.5% sobre la renta neta (ingresos netos menos gastos deducibles, menos participación de trabajadores si aplica).",
+          "base_calculo": "Renta neta imponible = Ingresos netos - Gastos deducibles - Pérdidas compensables",
+          "pagos_a_cuenta_mensual": {
+            "metodo_A_coeficiente": {
+              "descripcion": "Coeficiente = IR del año anterior / Ingresos netos del año anterior. Aplicable desde el período de enero.",
+              "calculo": "Ingresos netos del período × Coeficiente"
+            },
+            "metodo_B_porcentaje": {
+              "descripcion": "Aplicable cuando no exista impuesto calculado en el año anterior o sea el primer año.",
+              "tasa": "1.5% de los ingresos netos"
+            },
+            "regla": "Se aplica el mayor entre el método A y el método B (mínimo 1.5%)"
+          },
+          "regularizacion_anual": true,
+          "declaracion_anual_obligatoria": true,
+          "formulario_anual": "PDT 710 o Formulario Virtual 710"
+        },
+        "igv": {
+          "obligado": true,
+          "tasa_total": "18%",
+          "desglose": {
+            "igv_propiamente_dicho": "16%",
+            "impuesto_promocion_municipal_ipm": "2%"
+          },
+          "credito_fiscal": "Sí puede usar crédito fiscal del IGV",
+          "periodicidad": "Mensual"
+        },
+        "impuesto_temporal_activos_netos_itan": {
+          "aplica_a": "Contribuyentes con activos netos superiores a 1,000,000 de soles",
+          "tasa": "0.4% sobre los activos netos que superen S/ 1,000,000",
+          "periodicidad": "Anual con pagos a cuenta mensuales de marzo a diciembre",
+          "es_credito_contra_ir": true,
+          "base_legal": "Ley N° 28424"
+        },
+        "participacion_trabajadores": {
+          "aplica_a": "Empresas con más de 20 trabajadores",
+          "tasas_por_sector": {
+            "pesqueria": "10%",
+            "telecomunicaciones": "10%",
+            "industria": "10%",
+            "mineria": "8%",
+            "comercio_al_por_mayor_y_menor": "8%",
+            "restaurantes": "8%",
+            "otras_actividades": "5%"
+          },
+          "descripcion": "Porcentaje de la renta neta antes de impuestos a distribuir entre trabajadores como participación en utilidades.",
+          "base_legal": "D.Leg. 892"
+        }
+      },
+      "declaraciones": {
+        "mensual": {
+          "obligatoria": true,
+          "formulario": "PDT 621 o Declara Fácil 621",
+          "contenido": "IGV + Pago a cuenta del IR + otros tributos que correspondan",
+          "cronograma": "Según último dígito del RUC"
+        },
+        "anual": {
+          "obligatoria": true,
+          "formulario": "PDT 710 o Formulario Virtual 710",
+          "plazo": "Marzo o abril del año siguiente según cronograma SUNAT",
+          "contenido": [
+            "Determinación de renta bruta",
+            "Deducciones de gastos",
+            "Renta neta imponible",
+            "Cálculo del IR al 29.5%",
+            "Descuento de pagos a cuenta",
+            "Saldo a pagar o saldo a favor"
+          ]
+        }
+      },
+      "libros_contables": {
+        "obligatorio": true,
+        "criterio": "Según nivel de ingresos anuales",
+        "tramos": [
+          {
+            "nivel": "Hasta 300 UIT de ingresos netos anuales",
+            "soles_2024": 1545000,
+            "libros": [
+              "Registro de Ventas e Ingresos",
+              "Registro de Compras",
+              "Libro Diario de Formato Simplificado"
+            ]
+          },
+          {
+            "nivel": "Más de 300 UIT hasta 500 UIT de ingresos netos anuales",
+            "libros": [
+              "Registro de Ventas e Ingresos",
+              "Registro de Compras",
+              "Libro Diario",
+              "Libro Mayor"
+            ]
+          },
+          {
+            "nivel": "Más de 500 UIT hasta 1,700 UIT de ingresos netos anuales",
+            "libros": [
+              "Registro de Ventas e Ingresos",
+              "Registro de Compras",
+              "Libro Diario",
+              "Libro Mayor",
+              "Libro de Inventarios y Balances"
+            ]
+          },
+          {
+            "nivel": "Más de 1,700 UIT de ingresos netos anuales",
+            "soles_2024_desde": 8755000,
+            "libros": [
+              "Registro de Ventas e Ingresos",
+              "Registro de Compras",
+              "Libro Diario",
+              "Libro Mayor",
+              "Libro de Inventarios y Balances",
+              "Registro de Activos Fijos",
+              "Registro de Costos (si corresponde)",
+              "Registro de Inventario Permanente (si corresponde)"
+            ],
+            "sistema_contabilidad": "Contabilidad completa"
+          }
+        ],
+        "libros_electronicos": {
+          "descripcion": "Los contribuyentes principales y medianos están obligados a llevar libros electrónicos mediante el Sistema de Libros Electrónicos (SLE-PLE) o desde el Portal SUNAT (SLE-PORTAL).",
+          "referencia": "Resolución de Superintendencia 286-2009/SUNAT y modificatorias"
+        }
+      },
+      "gastos_deducibles": {
+        "principio": "Principio de causalidad — Solo son deducibles los gastos necesarios para producir renta o mantener la fuente.",
+        "gastos_deducibles_principales": [
+          {
+            "gasto": "Planilla y beneficios sociales",
+            "limite": "Sin límite específico, sujeto a bancarización si supera S/ 3,500 o $ 1,000"
+          },
+          {
+            "gasto": "Depreciación de activos fijos",
+            "tasas_maximas": {
+              "edificios_y_construcciones": "5%",
+              "ganado_de_trabajo_y_reproduccion": "25%",
+              "vehículos_de_transporte_terrestre": "20%",
+              "maquinaria_y_equipo": "10%",
+              "equipos_de_procesamiento_de_datos": "25%",
+              "otros_bienes": "10%"
+            }
+          },
+          {
+            "gasto": "Mermas y desmedros",
+            "requisito": "Las mermas deben acreditarse con informe técnico de perito independiente. Los desmedros deben ser destruidos ante notario o juez de paz."
+          },
+          {
+            "gasto": "Gastos de representación",
+            "limite": "0.5% de los ingresos netos, con un máximo de 40 UIT (S/ 206,000 en 2024)"
+          },
+          {
+            "gasto": "Gastos de viaje",
+            "limite": {
+              "transporte": "Sin límite (sujeto a documentación)",
+              "viaticos_en_el_exterior": "Doble de la escala fijada para viáticos de funcionarios públicos",
+              "viaticos_en_el_pais": "26.50% de la UIT por día"
+            }
+          },
+          {
+            "gasto": "Provisiones y castigos de deudas incobrables",
+            "requisitos": [
+              "Deuda debe tener más de 12 meses de vencida",
+              "Debe acreditarse la gestión de cobro",
+              "La provisión debe cargarse a resultados"
+            ]
+          },
+          {
+            "gasto": "Intereses por préstamos",
+            "limite": "Solo son deducibles en la parte que no excedan el monto de los ingresos por intereses exonerados e inafectos, más el triple del patrimonio neto del ejercicio anterior"
+          },
+          {
+            "gasto": "Donaciones",
+            "limite": "Hasta el 10% de la renta neta de tercera categoría, luego de efectuada la compensación de pérdidas",
+            "requisito": "Solo a entidades perceptoras de donaciones inscritas en el registro de SUNAT"
+          }
+        ],
+        "gastos_no_deducibles": [
+          "Gastos personales del propietario o sus familiares",
+          "Multas, recargos e intereses pagados al fisco peruano",
+          "Las sumas invertidas en la adquisición de bienes o mejoras de carácter permanente",
+          "Amortizaciones de llaves, marcas, patentes, procedimientos de fabricación no adquiridos a título oneroso",
+          "Los gastos cuyos comprobantes incumplen requisitos del reglamento de comprobantes"
+        ]
+      },
+      "perdidas": {
+        "sistemas_de_compensacion": [
+          {
+            "sistema": "Sistema A",
+            "descripcion": "La pérdida se puede compensar con las rentas netas de los 4 ejercicios inmediatos siguientes. Si quedan saldos no compensados, se pierden."
+          },
+          {
+            "sistema": "Sistema B",
+            "descripcion": "La pérdida se puede compensar con el 50% de las rentas netas de los ejercicios inmediatos siguientes, hasta agotar la pérdida (sin límite de años)."
+          }
+        ],
+        "eleccion": "El contribuyente elige el sistema al presentar la declaración anual y no puede cambiarlo."
+      },
+      "comprobantes_que_puede_emitir": [
+        "Facturas",
+        "Boletas de venta",
+        "Tickets de máquina registradora",
+        "Liquidaciones de compra",
+        "Notas de crédito",
+        "Notas de débito",
+        "Guías de remisión remitente",
+        "Recibos por honorarios"
+      ],
+      "casos_practicos": [
+        {
+          "id": "RG_CASO_01",
+          "descripcion": "SAC — Empresa de construcción — Ingresos S/ 2,000,000 — Costos y gastos S/ 1,500,000",
+          "ingresos_netos_anuales": 2000000,
+          "gastos_deducibles": 1500000,
+          "renta_neta_antes_participacion": 500000,
+          "participacion_trabajadores": {
+            "tasa": "10%",
+            "monto": 50000
+          },
+          "renta_neta_imponible": 450000,
+          "ir_anual": {
+            "tasa": "29.5%",
+            "monto": 132750
+          },
+          "pagos_a_cuenta_acumulados_estimado": 90000,
+          "regularizacion_anual": 42750
+        },
+        {
+          "id": "RG_CASO_02",
+          "descripcion": "Empresa exportadora — Ventas locales S/ 1,000,000 — Exportaciones S/ 500,000 — Gastos S/ 1,200,000",
+          "ingresos_netos_anuales": 1500000,
+          "gastos_deducibles": 1200000,
+          "renta_neta_imponible": 300000,
+          "ir_anual": {
+            "tasa": "29.5%",
+            "monto": 88500
+          },
+          "igv": {
+            "igv_ventas_locales": 180000,
+            "igv_compras_credito_fiscal": 150000,
+            "igv_exportaciones": "Exonerado (exportación no está gravada con IGV)",
+            "saldo_igv_mensual_aprox": 2500,
+            "nota": "Puede solicitar devolución del IGV de las exportaciones (drawback fiscal del IGV)"
+          }
+        }
+      ],
+      "preguntas_frecuentes": [
+        {
+          "pregunta": "¿Un médico que tiene una clínica debe estar en el Régimen General?",
+          "respuesta": "Depende de sus ingresos y estructura. Si opera como persona natural y sus ingresos no superan 1,700 UIT, puede estar en el RMT. Si opera mediante una persona jurídica (SAC, SRL, etc.) con ingresos dentro del límite, también puede estar en el RMT. Solo si supera 1,700 UIT anuales debe pasar al Régimen General. Los profesionales que emiten recibos por honorarios tributan en cuarta categoría, no en el RG."
+        },
+        {
+          "pregunta": "¿Las pérdidas de años anteriores reducen el IR a pagar?",
+          "respuesta": "Sí. Las pérdidas tributarias de ejercicios anteriores pueden compensarse con las rentas netas de ejercicios siguientes, bajo el Sistema A (hasta 4 años) o Sistema B (hasta el 50% de la renta neta sin límite de años). El sistema debe elegirse en la primera declaración anual que registre la pérdida."
+        },
+        {
+          "pregunta": "¿Cuándo un negocio del RMT pasa automáticamente al Régimen General?",
+          "respuesta": "Automáticamente en el período en que sus ingresos netos acumulados en el año superen 1,700 UIT. Desde ese mes, opera como Régimen General con todas sus obligaciones. Debe además recalcular sus pagos a cuenta con la tasa de 1.5% o coeficiente, lo que sea mayor."
+        },
+        {
+          "pregunta": "¿El IGV que pago en mis compras se descuenta del IGV de mis ventas?",
+          "respuesta": "Sí, eso es el crédito fiscal del IGV. El IGV que pagas en tus compras (IGV soportado) se resta del IGV que cobras en tus ventas (IGV repercutido). Solo pagas a SUNAT la diferencia. Si tus compras tienen más IGV que tus ventas, tienes saldo a favor que puedes arrastrar o pedir en devolución si eres exportador."
+        },
+        {
+          "pregunta": "¿Qué es el ITAN y quién lo paga?",
+          "respuesta": "El Impuesto Temporal a los Activos Netos (ITAN) lo pagan los contribuyentes del Régimen General cuyos activos netos al 31 de diciembre del año anterior superen S/ 1,000,000. La tasa es 0.4% sobre el exceso. Se paga en cuotas mensuales de abril a diciembre. El ITAN pagado puede usarse como crédito contra el IR anual, por lo que en la práctica no representa un costo adicional si hay suficiente IR que pagar."
+        }
+      ]
+    }
+  ],
+
+  "tabla_comparativa": {
+    "descripcion": "Resumen comparativo de los 4 regímenes tributarios SUNAT",
+    "columnas": ["Criterio", "Nuevo RUS", "RER", "RMT", "Régimen General"],
+    "filas": [
+      {
+        "criterio": "Límite de ingresos anuales",
+        "nuevo_rus": "S/ 96,000",
+        "rer": "S/ 525,000",
+        "rmt": "Hasta 1,700 UIT (S/ 8,755,000 en 2024)",
+        "regimen_general": "Sin límite"
+      },
+      {
+        "criterio": "Personas jurídicas",
+        "nuevo_rus": "NO",
+        "rer": "SÍ",
+        "rmt": "SÍ",
+        "regimen_general": "SÍ"
+      },
+      {
+        "criterio": "Tasa IR",
+        "nuevo_rus": "Cuota fija: S/ 20 o S/ 50/mes",
+        "rer": "1.5% de ingresos netos mensuales",
+        "rmt": "10% (hasta 15 UIT renta neta) / 29.5% (más de 15 UIT)",
+        "regimen_general": "29.5% de renta neta imponible"
+      },
+      {
+        "criterio": "Base del IR",
+        "nuevo_rus": "Cuota fija (no depende de ingresos reales)",
+        "rer": "Ingresos netos (sin deducir gastos)",
+        "rmt": "Renta neta (ingresos - gastos deducibles)",
+        "regimen_general": "Renta neta imponible (ingresos - gastos - pérdidas)"
+      },
+      {
+        "criterio": "IGV",
+        "nuevo_rus": "NO paga por separado (incluido en cuota)",
+        "rer": "SÍ — 18%",
+        "rmt": "SÍ — 18%",
+        "regimen_general": "SÍ — 18%"
+      },
+      {
+        "criterio": "Crédito fiscal IGV",
+        "nuevo_rus": "NO",
+        "rer": "SÍ",
+        "rmt": "SÍ",
+        "regimen_general": "SÍ"
+      },
+      {
+        "criterio": "Emite facturas",
+        "nuevo_rus": "NO",
+        "rer": "SÍ",
+        "rmt": "SÍ",
+        "regimen_general": "SÍ"
+      },
+      {
+        "criterio": "Declaración anual IR",
+        "nuevo_rus": "NO",
+        "rer": "NO",
+        "rmt": "SÍ — obligatoria",
+        "regimen_general": "SÍ — obligatoria"
+      },
+      {
+        "criterio": "Deducción de gastos para IR",
+        "nuevo_rus": "NO",
+        "rer": "NO",
+        "rmt": "SÍ",
+        "regimen_general": "SÍ"
+      },
+      {
+        "criterio": "Libros contables",
+        "nuevo_rus": "NINGUNO",
+        "rer": "Registro Compras y Ventas",
+        "rmt": "Según ingresos (Simplificado, Diario, Mayor, Inventarios)",
+        "regimen_general": "Según ingresos (hasta contabilidad completa)"
+      },
+      {
+        "criterio": "Compensación de pérdidas",
+        "nuevo_rus": "NO",
+        "rer": "NO",
+        "rmt": "SÍ",
+        "regimen_general": "SÍ"
+      },
+      {
+        "criterio": "Exportaciones",
+        "nuevo_rus": "Limitadas (solo simplificadas)",
+        "rer": "SÍ",
+        "rmt": "SÍ",
+        "regimen_general": "SÍ"
+      },
+      {
+        "criterio": "Número máximo de trabajadores",
+        "nuevo_rus": "Sin límite específico (pero límite de ingresos lo condiciona)",
+        "rer": "10 por turno",
+        "rmt": "Sin límite",
+        "regimen_general": "Sin límite"
+      }
+    ]
+  },
+
+  "obligaciones_tributarias_comunes": {
+    "descripcion": "Obligaciones que aplican a todos los regímenes según corresponda",
+    "obligaciones": [
+      {
+        "obligacion": "Inscripción en el RUC",
+        "aplica_a": "Todos los contribuyentes",
+        "plazo": "Antes de iniciar actividades"
+      },
+      {
+        "obligacion": "Declarar inicio de actividades",
+        "aplica_a": "Todos",
+        "plazo": "Al momento de la inscripción en el RUC"
+      },
+      {
+        "obligacion": "Pago de EsSalud",
+        "aplica_a": "Contribuyentes con trabajadores en planilla",
+        "tasa": "9% de la remuneración mensual",
+        "nota": "Independiente del régimen tributario"
+      },
+      {
+        "obligacion": "Retención ONP",
+        "aplica_a": "Empleadores cuyos trabajadores no estén afiliados a AFP",
+        "tasa": "13% de la remuneración asegurable",
+        "nota": "Independiente del régimen tributario"
+      },
+      {
+        "obligacion": "Sistema de Detracciones (SPOT)",
+        "aplica_a": "Contribuyentes que vendan bienes o servicios sujetos al sistema",
+        "descripcion": "El comprador deposita un porcentaje del precio de compra en la cuenta de detracciones del vendedor en el Banco de la Nación. Ese fondo solo puede usarse para pagar tributos.",
+        "tasas_ejemplo": {
+          "servicios_en_general": "12%",
+          "contratos_de_construccion": "4%",
+          "arena_y_piedra": "12%",
+          "desperdicios_y_desechos": "15%"
+        }
+      },
+      {
+        "obligacion": "Sistema de Retenciones IGV",
+        "aplica_a": "Agentes de retención designados por SUNAT al vender a ellos",
+        "tasa": "3% del importe de la operación"
+      },
+      {
+        "obligacion": "Sistema de Percepciones IGV",
+        "aplica_a": "Agentes de percepción designados por SUNAT (en compras de combustible, importaciones, compras a supermercados, etc.)",
+        "tasas": "Varían según el bien (0.5%, 1%, 2%)"
+      }
+    ]
+  },
+
+  "igv_general": {
+    "descripcion": "Datos generales del IGV aplicables al RER, RMT y Régimen General",
+    "tasa": "18% (16% IGV + 2% IPM)",
+    "base_legal": "D.S. 055-99-EF — TUO de la Ley del IGV e ISC",
+    "operaciones_gravadas": [
+      "Venta de bienes muebles en el país",
+      "Prestación o utilización de servicios en el país",
+      "Contratos de construcción",
+      "Primera venta de inmuebles (realizadas por el constructor)",
+      "Importación de bienes"
+    ],
+    "operaciones_exoneradas_principales": [
+      "Venta e importación de bienes de la lista del Apéndice I de la Ley (arroz, azúcar, medicamentos, etc.)",
+      "Servicios del Apéndice II (transporte público, servicio de crédito de las empresas bancarias, pólizas de seguros de vida, etc.)",
+      "Exportación de bienes y servicios"
+    ],
+    "credito_fiscal": {
+      "requisitos_sustanciales": [
+        "El IGV debe ser permitido como costo o gasto",
+        "Se destinará a operaciones gravadas con el IGV"
+      ],
+      "requisitos_formales": [
+        "El comprobante debe estar anotado en el Registro de Compras",
+        "El comprobante debe cumplir con los requisitos del Reglamento de Comprobantes",
+        "El comprobante debe corresponder a la adquisición del período"
+      ]
+    },
+    "exportaciones": {
+      "descripcion": "Las exportaciones están gravadas con tasa 0% (inafectas al IGV). El exportador puede solicitar la devolución del crédito fiscal del IGV de sus compras vinculadas a la exportación.",
+      "mecanismo_devolucion": "Notas de crédito negociables o cheques no negociables",
+      "plazo_solicitud": "Dentro del plazo de prescripción de 4 años"
+    }
+  },
+
+  "infracciones_y_sanciones": {
+    "descripcion": "Infracciones más comunes del Código Tributario y sus sanciones, según la Tabla aplicable a cada régimen.",
+    "tablas": {
+      "tabla_I": "Aplica a personas naturales que perciben rentas de tercera categoría en el Régimen General y RMT",
+      "tabla_II": "Aplica a personas naturales que perciben rentas de cuarta categoría y RER",
+      "tabla_III": "Aplica a contribuyentes del Nuevo RUS"
+    },
+    "infracciones_principales": [
+      {
+        "infraccion": "No inscribirse en el RUC",
+        "articulo": "Art. 173 num. 1 CT",
+        "sancion_tabla_I": "50% UIT",
+        "sancion_tabla_II": "25% UIT",
+        "sancion_tabla_III": "0.2% I o cierre"
+      },
+      {
+        "infraccion": "No presentar declaración dentro del plazo",
+        "articulo": "Art. 176 num. 1 CT",
+        "sancion_tabla_I": "1 UIT",
+        "sancion_tabla_II": "50% UIT",
+        "sancion_tabla_III": "0.2% I o cierre",
+        "gradualidad_maxima": "90% de reducción si se subsana voluntariamente antes de notificación"
+      },
+      {
+        "infraccion": "No emitir comprobantes de pago",
+        "articulo": "Art. 174 num. 1 CT",
+        "sancion": "Cierre de establecimiento (1 a 10 días)",
+        "primera_vez": "1 día",
+        "segunda_vez": "3 días",
+        "tercera_vez_adelante": "10 días"
+      },
+      {
+        "infraccion": "Emitir comprobantes sin reunir los requisitos",
+        "articulo": "Art. 174 num. 2 CT",
+        "sancion": "Cierre (1 a 10 días) o 25% UIT"
+      },
+      {
+        "infraccion": "No llevar libros contables obligatorios",
+        "articulo": "Art. 175 num. 1 CT",
+        "sancion_tabla_I": "0.6% de los Ingresos Netos",
+        "sancion_tabla_II": "0.3% de los Ingresos Netos",
+        "tope_minimo": "10% UIT",
+        "tope_maximo": "25 UIT"
+      },
+      {
+        "infraccion": "No pagar tributos dentro del plazo",
+        "articulo": "Art. 178 num. 1 CT",
+        "sancion": "50% del tributo omitido (más TIM al 0.03% diario)",
+        "gradualidad": "Hasta 95% de reducción si se paga con la declaración rectificatoria"
+      }
+    ],
+    "tim": {
+      "descripcion": "Tasa de Interés Moratorio aplicada a deudas tributarias no pagadas en el plazo",
+      "tasa_mensual": "1%",
+      "tasa_diaria": "0.03%",
+      "base_legal": "Resolución de Superintendencia que fija la TIM (varía periódicamente)"
+    },
+    "regimen_de_gradualidad": {
+      "descripcion": "Permite reducir las multas tributarias en porcentajes significativos según el momento de subsanación.",
+      "rebajas": {
+        "antes_de_notificacion_sin_pago": "Reducción del 90%",
+        "antes_de_notificacion_con_pago": "Reducción del 95%",
+        "dentro_plazo_de_apelacion_sin_pago": "Reducción del 60%",
+        "dentro_plazo_de_apelacion_con_pago": "Reducción del 70%"
+      }
+    }
+  },
+
+  "uit_historico": {
+    "descripcion": "Valor de la Unidad Impositiva Tributaria (UIT) por año. Esencial para recalcular límites históricos.",
+    "valores": [
+      { "año": 2017, "uit_soles": 4050 },
+      { "año": 2018, "uit_soles": 4150 },
+      { "año": 2019, "uit_soles": 4200 },
+      { "año": 2020, "uit_soles": 4300 },
+      { "año": 2021, "uit_soles": 4400 },
+      { "año": 2022, "uit_soles": 4600 },
+      { "año": 2023, "uit_soles": 4950 },
+      { "año": 2024, "uit_soles": 5150 },
+      { "año": 2025, "uit_soles": 5350 },
+      { "año": 2026, "uit_soles": 5500 }
+
+    ]
+  },
+  "rentas_de_trabajo": [
+    {
+      "categoria": "Cuarta Categoría (4ta)",
+      "descripcion": "Ingresos obtenidos por el ejercicio individual, independiente, de cualquier profesión, arte, ciencia u oficio. Se sustenta con Recibos por Honorarios Electrónicos (RHE).",
+      "tasas_y_retenciones": "Si un recibo supera los S/ 1,500, la empresa retiene el 8%. Para 2024, si los ingresos anuales proyectados no superan los S/ 45,063, se puede solicitar la Suspensión de Retenciones.",
+      "declaracion": "Declaración anual obligatoria si hay saldo a pagar o si se superan los límites de exoneración."
+    },
+    {
+      "categoria": "Quinta Categoría (5ta)",
+      "descripcion": "Ingresos obtenidos por el trabajo en relación de dependencia (empleados en planilla).",
+      "tasas_y_retenciones": "El empleador retiene el impuesto mensualmente. Los primeros 7 UIT (S/ 36,050 para 2024) de ingresos anuales están inafectos de impuestos. El exceso paga tasas progresivas (8%, 14%, 17%, 20%, 30%).",
+      "declaracion": "Generalmente el empleador hace la declaración y retención. El trabajador solo declara si tiene más de un empleador o si deduce gastos adicionales (hasta 3 UIT)."
+    }
+  ]
+}
