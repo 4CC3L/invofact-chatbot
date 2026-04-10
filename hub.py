@@ -587,10 +587,10 @@ with st.sidebar:
         f"""
         <div style="padding:1.2rem 0.5rem 0.6rem;text-align:center;">
             <p style="font-size:1.65rem;font-weight:800;margin:0;line-height:1.1;">
-                🤖&nbsp;<span style="color:{_BLUE};">Chat</span><span style="color:{_AMBER};">Hub</span>
+                🤖&nbsp;<span style="color:{_BLUE};">Invo</span><span style="color:{_AMBER};">Fact</span>
             </p>
             <p style="font-size:0.72rem;color:{_MUTED};margin:0.25rem 0 0;">
-                PUCP · Asistentes Inteligentes
+                Support CHAT - TaxBot SUNAT
             </p>
         </div>
         <hr style="border:none;border-top:1px solid {_BORDER};margin:0.5rem 0 1rem;">
