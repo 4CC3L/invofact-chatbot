@@ -2,7 +2,7 @@
   "metadata": {
     "titulo": "Dataset maestro — Regímenes tributarios SUNAT Perú",
     "version": "2.0",
-    "año_referencia": 2024,
+    "año_referencia": 2026,
     "uit_2024": 5150,
     "uit_2023": 4950,
     "uit_2022": 4600,
@@ -17,12 +17,13 @@
     "notas": [
       "Los límites expresados en UIT se recalculan cada año según el valor de la UIT vigente.",
       "Las tasas de IGV incluyen el 2% del Impuesto de Promoción Municipal (IPM).",
-      "El dataset incluye datos vigentes al 2024 y referencias históricas relevantes."
-    ]
+      "El dataset incluye datos vigentes al 2024 y referencias históricas relevantes.",
+      "Se incluye sección 'comprobantes_de_pago' con normas del Reglamento de Comprobantes de Pago (R.S. 007-99/SUNAT), incluyendo el umbral de S/ 700 para identificación del comprador en boletas."
+    ],
+    "uit_2026": 5500,
+    "uit_2025": 5350
   },
-
   "regimenes": [
-
     {
       "id": "NRUS",
       "nombre_completo": "Nuevo Régimen Único Simplificado",
@@ -119,7 +120,11 @@
           "obligatoria": true,
           "formulario": "Formulario Virtual N° 1611 o Declara Fácil 621 (categoría especial)",
           "contenido": "Declaración y pago de la cuota mensual del NRUS",
-          "medio": ["SUNAT Virtual", "Agente bancario autorizado", "Oficinas SUNAT"],
+          "medio": [
+            "SUNAT Virtual",
+            "Agente bancario autorizado",
+            "Oficinas SUNAT"
+          ],
           "nota": "Aunque no haya ventas en el mes, debe declararse"
         },
         "anual": {
@@ -164,7 +169,11 @@
         "descripcion": "NO pueden hacer uso del crédito fiscal del IGV."
       },
       "cambio_de_regimen": {
-        "puede_cambiar_a": ["RER", "RMT", "Régimen General"],
+        "puede_cambiar_a": [
+          "RER",
+          "RMT",
+          "Régimen General"
+        ],
         "momento_cambio": {
           "al_inicio_año": "Puede acogerse al RER, RMT o RG desde el primer período del año (enero) con la primera declaración.",
           "durante_año": "Puede cambiar al RER, RMT o RG en cualquier período mensual (desde el primer día del mes)."
@@ -246,6 +255,14 @@
           "respuesta": "Sí, el D.Leg. 1270 permite realizar exportaciones definitivas, bajo las normas del Reglamento de Exportación Simplificada. Sin embargo, las exportaciones no pueden superar el límite anual de S/ 96,000."
         },
         {
+          "pregunta": "Estoy en el Nuevo RUS, ¿puedo emitir factura a un cliente que me compra más de 700 soles?",
+          "respuesta": "No. Los contribuyentes del Nuevo RUS (NRUS) NO pueden emitir facturas bajo ninguna circunstancia, sin importar el monto de la venta. Tampoco pueden emitir liquidaciones de compra. Solo pueden emitir: boletas de venta, tickets de máquina registradora y notas de crédito o débito vinculadas a boletas. Si tu cliente necesita factura para sustentar gasto o crédito fiscal del IGV, no puedes dársela estando en el NRUS. En ese caso, deberías evaluar cambiar al RER, RMT o Régimen General. Emitir facturas estando en el NRUS es una infracción sancionada con cierre del establecimiento desde el primer día."
+        },
+        {
+          "pregunta": "¿Puedo darle factura a una empresa si estoy en el NRUS?",
+          "respuesta": "No. El NRUS prohíbe emitir facturas. Solo puedes emitir boletas de venta. Si la empresa necesita factura para deducir gastos o usar crédito fiscal del IGV, no podrás atenderla desde el NRUS. Considera cambiar al RER, RMT o Régimen General si necesitas emitir facturas."
+        },
+        {
           "pregunta": "¿Qué pasa si no declaro en un mes porque no tuve ventas?",
           "respuesta": "Igualmente debes presentar la declaración mensual con S/ 0 de ingresos. Si no lo haces, incurres en la infracción del artículo 176 numeral 1 del Código Tributario (no presentar declaraciones en el plazo establecido), con multa de 1 UIT, reducida por gradualidad."
         },
@@ -256,10 +273,21 @@
         {
           "pregunta": "¿El NRUS cubre el pago de EsSalud?",
           "respuesta": "No. La cuota del NRUS solo sustituye al IGV y al IR. Si tienes trabajadores, deberás pagar EsSalud (9% de la remuneración) y las contribuciones a AFP u ONP de forma independiente."
+        },
+        {
+          "pregunta": "¿Debo registrar mis boletas en algún libro contable si estoy en el NRUS?",
+          "respuesta": "No. En el Nuevo RUS (NRUS) NO estás obligado a llevar ningún libro contable: ni Registro de Ventas, ni Registro de Compras, ni Libro Diario, ni ningún otro. Solo debes pagar tu cuota mensual fija (S/ 20 o S/ 50). Esta es una de las grandes ventajas del NRUS frente a otros regímenes como el RER, que sí exige llevar Registro de Compras y Registro de Ventas."
+        },
+        {
+          "pregunta": "¿Qué libros contables lleva el NRUS?",
+          "respuesta": "Ninguno. Los contribuyentes del Nuevo RUS (NRUS) NO están obligados a llevar libros contables de ningún tipo. No llevan Registro de Compras, ni Registro de Ventas, ni Libro Diario, ni Libro Mayor. Solo deben pagar su cuota mensual fija."
+        },
+        {
+          "pregunta": "¿El Nuevo RUS lleva Registro de Compras y Ventas?",
+          "respuesta": "No. El Registro de Compras y el Registro de Ventas e Ingresos son obligatorios para el RER (Régimen Especial), NO para el NRUS. En el Nuevo RUS no se lleva ningún libro ni registro contable obligatorio."
         }
       ]
     },
-
     {
       "id": "RER",
       "nombre_completo": "Régimen Especial del Impuesto a la Renta",
@@ -327,7 +355,10 @@
           "obligatoria": true,
           "formulario": "PDT 621 o Declara Fácil 621",
           "contenido": "Declaración mensual de IGV e IR (tasa del 1.5%)",
-          "medio": ["SUNAT Virtual (SOL)", "Agentes bancarios autorizados"],
+          "medio": [
+            "SUNAT Virtual (SOL)",
+            "Agentes bancarios autorizados"
+          ],
           "cronograma": "Según último dígito de RUC, igual que el NRUS"
         },
         "anual": {
@@ -364,8 +395,15 @@
         "descripcion": "Sí pueden usar el crédito fiscal del IGV de sus compras y adquisiciones, sustentado con facturas o liquidaciones de compra."
       },
       "cambio_de_regimen": {
-        "puede_cambiar_a": ["RMT", "Régimen General"],
-        "puede_cambiar_desde": ["Nuevo RUS", "RMT", "Régimen General"],
+        "puede_cambiar_a": [
+          "RMT",
+          "Régimen General"
+        ],
+        "puede_cambiar_desde": [
+          "Nuevo RUS",
+          "RMT",
+          "Régimen General"
+        ],
         "acogimiento": {
           "nueva_empresa": "Al momento de inscribirse en el RUC, en la declaración jurada de inicio de actividades.",
           "empresa_existente_de_otro_regimen": "Con ocasión de la declaración y pago correspondiente al período de enero de cada año.",
@@ -398,7 +436,10 @@
           },
           "total_impuestos_mes": 1635,
           "puede_emitir_factura": true,
-          "libros_obligatorios": ["Registro de Compras", "Registro de Ventas"]
+          "libros_obligatorios": [
+            "Registro de Compras",
+            "Registro de Ventas"
+          ]
         },
         {
           "id": "RER_CASO_02",
@@ -441,7 +482,6 @@
         }
       ]
     },
-
     {
       "id": "RMT",
       "nombre_completo": "Régimen MYPE Tributario del Impuesto a la Renta",
@@ -469,7 +509,8 @@
           "No tener vinculación directa o indirecta con otras personas naturales o jurídicas cuyos ingresos netos anuales en conjunto superen 1,700 UIT",
           "No ser sucursal, agencia o establecimiento permanente de empresas constituidas en el exterior",
           "No haber obtenido en el ejercicio gravable anterior ingresos netos superiores a 1,700 UIT"
-        ]
+        ],
+        "limite_ingresos_anuales_soles_2026": 9350000
       },
       "tributos_que_paga": {
         "impuesto_a_la_renta": {
@@ -587,8 +628,14 @@
         "principio_causalidad": "Solo son deducibles los gastos necesarios para producir renta y mantener la fuente, que estén debidamente documentados con comprobantes de pago."
       },
       "cambio_de_regimen": {
-        "puede_cambiar_desde": ["Nuevo RUS", "RER", "Régimen General"],
-        "puede_cambiar_a": ["Régimen General"],
+        "puede_cambiar_desde": [
+          "Nuevo RUS",
+          "RER",
+          "Régimen General"
+        ],
+        "puede_cambiar_a": [
+          "Régimen General"
+        ],
         "acogimiento": {
           "nueva_empresa": "Acogimiento al momento de inscripción en el RUC.",
           "desde_otro_regimen": "Con la presentación de la declaración del mes de enero."
@@ -667,10 +714,17 @@
         {
           "pregunta": "¿Los pagos a cuenta del 1% son obligatorios aunque no tenga utilidad?",
           "respuesta": "Sí. Los pagos a cuenta mensuales del RMT (1% para contribuyentes con hasta 300 UIT de ingresos) son obligatorios independientemente de si el negocio tuvo ganancia o pérdida en el mes. Lo que sí puede ajustarse es el coeficiente a partir de agosto, si el balance del semestre muestra pérdidas, mediante la suspensión o modificación del pago a cuenta."
+        },
+        {
+          "pregunta": "¿Cuál es el plazo para anular una factura en el Régimen MYPE Tributario (RMT)?",
+          "respuesta": "En el RMT puedes emitir facturas electrónicas y físicas. Para anular una factura electrónica mediante una Nota de Crédito, el plazo máximo referencial es hasta el último día del mes siguiente a la fecha de emisión del comprobante que se desea modificar o anular. Este plazo aplica a los sistemas de emisión electrónica SEE-SOL, SEE-SFC y SEE-OSE. Para facturas físicas (no electrónicas), no existe un plazo legal máximo fijo: la nota de crédito puede emitirse en cualquier momento mientras la operación lo justifique. Base legal: R.S. 007-99/SUNAT Art. 10° y resoluciones del sistema SEE. Ante cualquier duda sobre el sistema de emisión específico que uses, se recomienda consultar sunat.gob.pe o a un contador certificado."
+        },
+        {
+          "pregunta": "¿Puedo anular una factura electrónica en el RMT pasado el mes siguiente?",
+          "respuesta": "Si ya venció el plazo del mes siguiente, no podrás emitir una nota de crédito electrónica de anulación directamente. En ese caso debes consultar con un contador o directamente con SUNAT, ya que las opciones dependen del sistema de emisión electrónica (SEE) que uses. Base legal: R.S. 007-99/SUNAT Art. 10°."
         }
       ]
     },
-
     {
       "id": "RG",
       "nombre_completo": "Régimen General del Impuesto a la Renta",
@@ -963,10 +1017,15 @@
       ]
     }
   ],
-
   "tabla_comparativa": {
     "descripcion": "Resumen comparativo de los 4 regímenes tributarios SUNAT",
-    "columnas": ["Criterio", "Nuevo RUS", "RER", "RMT", "Régimen General"],
+    "columnas": [
+      "Criterio",
+      "Nuevo RUS",
+      "RER",
+      "RMT",
+      "Régimen General"
+    ],
     "filas": [
       {
         "criterio": "Límite de ingresos anuales",
@@ -1061,7 +1120,6 @@
       }
     ]
   },
-
   "obligaciones_tributarias_comunes": {
     "descripcion": "Obligaciones que aplican a todos los regímenes según corresponda",
     "obligaciones": [
@@ -1110,7 +1168,6 @@
       }
     ]
   },
-
   "igv_general": {
     "descripcion": "Datos generales del IGV aplicables al RER, RMT y Régimen General",
     "tasa": "18% (16% IGV + 2% IPM)",
@@ -1144,7 +1201,6 @@
       "plazo_solicitud": "Dentro del plazo de prescripción de 4 años"
     }
   },
-
   "infracciones_y_sanciones": {
     "descripcion": "Infracciones más comunes del Código Tributario y sus sanciones, según la Tabla aplicable a cada régimen.",
     "tablas": {
@@ -1210,37 +1266,129 @@
         "dentro_plazo_de_apelacion_sin_pago": "Reducción del 60%",
         "dentro_plazo_de_apelacion_con_pago": "Reducción del 70%"
       }
-    }
+    },
+    "preguntas_frecuentes": [
+      {
+        "pregunta": "¿Cobran intereses si pago tarde un tributo? ¿Cuánto es el interés por pagar tarde a SUNAT?",
+        "respuesta": "Sí. Cuando pagas un tributo fuera del plazo establecido, SUNAT cobra la Tasa de Interés Moratorio (TIM), que es del 1% mensual, equivalente al 0.03% diario sobre el monto de la deuda no pagada. Además, si declaraste menos de lo que debías (tributo omitido), la sanción es del 50% del tributo omitido más la TIM del 0.03% diario. Base legal: Art. 178 num. 1 del Código Tributario."
+      },
+      {
+        "pregunta": "¿Qué es la TIM y cuánto es?",
+        "respuesta": "La TIM es la Tasa de Interés Moratorio que SUNAT aplica a las deudas tributarias no pagadas en el plazo establecido. La TIM vigente es del 1% mensual (0.03% diario). Se aplica sobre el monto del tributo no pagado desde el día siguiente al vencimiento hasta la fecha de pago efectivo."
+      },
+      {
+        "pregunta": "¿Cuánto me cobran de interés si no pagué mi impuesto a tiempo?",
+        "respuesta": "SUNAT aplica la TIM (Tasa de Interés Moratorio) del 1% mensual (0.03% diario) sobre el tributo no pagado. Por ejemplo, si debes S/ 1,000 y lo pagas 30 días tarde, el interés adicional es S/ 10 (1% de S/ 1,000). Si además omitiste declararlo correctamente, hay una multa adicional del 50% del tributo omitido, que puede reducirse hasta un 95% si pagas voluntariamente antes de que SUNAT te notifique."
+      },
+      {
+        "pregunta": "¿Cuál es la multa por no llevar libros contables en el RER (Régimen Especial)?",
+        "respuesta": "Para el RER (Régimen Especial del IR), la multa por no llevar libros contables obligatorios (Art. 175 num. 1 del Código Tributario) se calcula según la Tabla II, que equivale al 0.3% de los Ingresos Netos. El tope mínimo es el 10% de la UIT y el tope máximo es 25 UIT. Recuerda que en el RER estás obligado a llevar el Registro de Compras y el Registro de Ventas e Ingresos."
+      },
+      {
+        "pregunta": "¿Cuál es la diferencia entre la Tabla I y la Tabla II de sanciones de SUNAT?",
+        "respuesta": "La Tabla I aplica a contribuyentes del Régimen General (RG) y del Régimen MYPE Tributario (RMT). La Tabla II aplica a contribuyentes del Régimen Especial (RER) y personas naturales con rentas de cuarta categoría. La Tabla III aplica a contribuyentes del Nuevo RUS (NRUS). Por eso, para el RER siempre se usa la Tabla II y sus sanciones son menores que las de la Tabla I."
+      }
+    ]
   },
-
   "uit_historico": {
     "descripcion": "Valor de la Unidad Impositiva Tributaria (UIT) por año. Esencial para recalcular límites históricos.",
     "valores": [
-      { "año": 2017, "uit_soles": 4050 },
-      { "año": 2018, "uit_soles": 4150 },
-      { "año": 2019, "uit_soles": 4200 },
-      { "año": 2020, "uit_soles": 4300 },
-      { "año": 2021, "uit_soles": 4400 },
-      { "año": 2022, "uit_soles": 4600 },
-      { "año": 2023, "uit_soles": 4950 },
-      { "año": 2024, "uit_soles": 5150 },
-      { "año": 2025, "uit_soles": 5350 },
-      { "año": 2026, "uit_soles": 5500 }
-
+      {
+        "año": 2017,
+        "uit_soles": 4050
+      },
+      {
+        "año": 2018,
+        "uit_soles": 4150
+      },
+      {
+        "año": 2019,
+        "uit_soles": 4200
+      },
+      {
+        "año": 2020,
+        "uit_soles": 4300
+      },
+      {
+        "año": 2021,
+        "uit_soles": 4400
+      },
+      {
+        "año": 2022,
+        "uit_soles": 4600
+      },
+      {
+        "año": 2023,
+        "uit_soles": 4950
+      },
+      {
+        "año": 2024,
+        "uit_soles": 5150
+      },
+      {
+        "año": 2025,
+        "uit_soles": 5350
+      },
+      {
+        "año": 2026,
+        "uit_soles": 5500
+      }
     ]
   },
-  "rentas_de_trabajo": [
-    {
-      "categoria": "Cuarta Categoría (4ta)",
-      "descripcion": "Ingresos obtenidos por el ejercicio individual, independiente, de cualquier profesión, arte, ciencia u oficio. Se sustenta con Recibos por Honorarios Electrónicos (RHE).",
-      "tasas_y_retenciones": "Si un recibo supera los S/ 1,500, la empresa retiene el 8%. Para 2024, si los ingresos anuales proyectados no superan los S/ 45,063, se puede solicitar la Suspensión de Retenciones.",
-      "declaracion": "Declaración anual obligatoria si hay saldo a pagar o si se superan los límites de exoneración."
+  "comprobantes_de_pago": {
+    "descripcion": "Normas sobre emisión de comprobantes de pago según el Reglamento de Comprobantes de Pago.",
+    "base_legal": [
+      "Resolución de Superintendencia N° 007-99/SUNAT — Reglamento de Comprobantes de Pago",
+      "Resolución de Superintendencia N° 300-2014/SUNAT — Modifica el Reglamento de Comprobantes de Pago"
+    ],
+    "boleta_de_venta": {
+      "descripcion": "Comprobante emitido en operaciones con consumidores finales. No otorga crédito fiscal al comprador.",
+      "datos_del_comprador": {
+        "monto_minimo_para_exigir_identificacion_soles": 700,
+        "regla": "Cuando el importe de la boleta de venta supere S/ 700, es OBLIGATORIO consignar los datos de identidad del adquirente o usuario: apellidos y nombres, y número de DNI u otro documento de identidad.",
+        "base_legal": "Numeral 3.10 del artículo 8° del Reglamento de Comprobantes de Pago (R.S. 007-99/SUNAT)",
+        "dato_obligatorio": "Apellidos y nombres + número de DNI (u otro documento de identidad)",
+        "nota": "Para importes iguales o menores a S/ 700, los datos del comprador son opcionales salvo que el comprador los solicite expresamente.",
+        "boleta_electronica": "En boletas electrónicas (BVE), SUNAT puede establecer reglas adicionales según el sistema de emisión (SEE-SOL, SEE-SFC, SEE-OSE)."
+      },
+      "obligados_a_emitir_boleta_electronica": {
+        "descripcion": "SUNAT ha incorporado progresivamente a contribuyentes a la obligación de emitir Boletas de Venta Electrónicas.",
+        "referencia": "Resoluciones de Superintendencia que amplían el padrón de emisores electrónicos obligados (consultar SUNAT para el padrón vigente)."
+      }
     },
-    {
-      "categoria": "Quinta Categoría (5ta)",
-      "descripcion": "Ingresos obtenidos por el trabajo en relación de dependencia (empleados en planilla).",
-      "tasas_y_retenciones": "El empleador retiene el impuesto mensualmente. Los primeros 7 UIT (S/ 36,050 para 2024) de ingresos anuales están inafectos de impuestos. El exceso paga tasas progresivas (8%, 14%, 17%, 20%, 30%).",
-      "declaracion": "Generalmente el empleador hace la declaración y retención. El trabajador solo declara si tiene más de un empleador o si deduce gastos adicionales (hasta 3 UIT)."
+    "factura": {
+      "descripcion": "Comprobante que otorga derecho al crédito fiscal del IGV al comprador. Solo puede emitirse a contribuyentes con RUC.",
+      "dato_obligatorio_comprador": "RUC del adquirente o usuario.",
+      "no_emitir_a": "Personas naturales sin RUC (en ese caso se emite boleta de venta)."
+    },
+    "preguntas_frecuentes": [
+      {
+        "pregunta": "¿A partir de qué monto es obligatorio pedir el DNI en una boleta de venta?",
+        "respuesta": "Cuando el importe de la boleta supera S/ 700, es obligatorio registrar los datos de identidad del comprador: apellidos, nombres y número de DNI (u otro documento de identidad). Para montos iguales o menores a S/ 700 no es obligatorio, salvo que el cliente lo solicite. Base legal: Numeral 3.10 del artículo 8° del Reglamento de Comprobantes de Pago (R.S. 007-99/SUNAT)."
+      },
+      {
+        "pregunta": "¿Qué pasa si no consigno el DNI en boletas mayores a S/ 700?",
+        "respuesta": "Se incurre en la infracción del artículo 174 numeral 2 del Código Tributario: emitir comprobantes de pago sin reunir los requisitos y características establecidos. La sanción es el cierre del establecimiento (1 día la primera vez) o multa del 25% de la UIT, con posibilidad de reducción por el régimen de gradualidad."
+      },
+      {
+        "pregunta": "¿Puedo emitir boleta de venta a una empresa?",
+        "respuesta": "Sí, pero la empresa compradora no podrá usar esa boleta para sustentar gasto ni crédito fiscal. Para que la empresa pueda deducir el gasto o usar el crédito fiscal del IGV, debes emitirle una factura con su RUC."
+      }
+    ],
+    "nota_de_credito": {
+      "descripcion": "Documento que modifica o anula comprobantes de pago ya emitidos.",
+      "base_legal": "Reglamento de Comprobantes de Pago — R.S. 007-99/SUNAT, Art. 10°",
+      "plazo_para_emitir": {
+        "regla_general": "No existe un plazo legal máximo fijo para emitir una nota de crédito por anulación de una factura física. Puede emitirse en cualquier momento mientras la operación lo justifique.",
+        "comprobantes_electronicos": "Para comprobantes electrónicos (Factura Electrónica, Boleta Electrónica), el plazo máximo para emitir la nota de crédito de anulación es hasta el último día del mes siguiente a la emisión del comprobante que se modifica, según las condiciones del sistema de emisión electrónica utilizado (SEE-SOL, SEE-OSE, SEE-SFC).",
+        "nota": "Este dato no siempre figura en el dataset con precisión. Ante duda del plazo exacto, el contribuyente debe consultar sunat.gob.pe o a un contador certificado."
+      },
+      "preguntas_frecuentes": [
+        {
+          "pregunta": "¿Cuánto tiempo tengo para anular una factura electrónica con una nota de crédito?",
+          "respuesta": "No existe un plazo único universal. Para comprobantes electrónicos emitidos por el sistema SEE, el plazo máximo referencial es hasta el último día del mes siguiente a la emisión. Sin embargo, este plazo puede variar según el sistema de emisión (SEE-SOL, SEE-SFC, SEE-OSE). Se recomienda consultar directamente en sunat.gob.pe el reglamento del sistema de emisión electrónica que uses. Base legal referencial: R.S. 007-99/SUNAT Art. 10° y resoluciones del sistema SEE."
+        }
+      ]
     }
-  ]
+  }
 }

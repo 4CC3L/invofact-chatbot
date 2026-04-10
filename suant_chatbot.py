@@ -14,7 +14,7 @@ st.set_page_config(page_title="TAX-BOT PUCP", page_icon="🤖", layout="centered
 
 # ==========================================
 # 2. CACHÉ DE LA BASE DE DATOS (RAG)
-#    Chunking completo del dataset +
+#    CORREGIDO: chunking completo del dataset +
 #    modelo de embeddings multilingüe
 # ==========================================
 @st.cache_resource
@@ -111,20 +111,28 @@ def cargar_base_conocimiento():
                     metadata={"fuente": f"Libros {acronimo}", "regimen": acronimo}
                 ))
         else:
+            libros_obligatorio = libros_obj.get("obligatorio", True)
             libros_desc = libros_obj.get("descripcion", "")
-            
-            # Extraemos inteligentemente el nombre del libro si es un diccionario
-            lista_libros = libros_obj.get("libros_requeridos", [])
-            libros_req = " | ".join([
-                libro.get("libro", "") if isinstance(libro, dict) else str(libro) 
-                for libro in lista_libros
-            ])
-            
-            if libros_desc or libros_req:
-                documentos.append(Document(
-                    page_content=f"Libros contables en el {acronimo}: {libros_desc} {libros_req}".strip(),
-                    metadata={"fuente": f"Libros {acronimo}", "regimen": acronimo}
-                ))
+            libros_req  = " | ".join(
+                item["libro"] if isinstance(item, dict) else item
+                for item in libros_obj.get("libros_requeridos", [])
+            )
+            # Construir texto explícito según si es obligatorio o no
+            if not libros_obligatorio:
+                libros_texto = (
+                    f"Libros contables en el {acronimo} ({nombre}): "
+                    f"NO están obligados a llevar libros contables de ningún tipo. "
+                    f"{libros_desc}"
+                )
+            else:
+                libros_texto = (
+                    f"Libros contables en el {acronimo} ({nombre}): "
+                    f"{libros_desc} {libros_req}"
+                )
+            documentos.append(Document(
+                page_content=libros_texto.strip(),
+                metadata={"fuente": f"Libros {acronimo}", "regimen": acronimo}
+            ))
 
         # Comprobantes
         comp_puede = reg.get("comprobantes_que_puede_emitir", [])
@@ -132,16 +140,30 @@ def cargar_base_conocimiento():
         if comp_puede:
             documentos.append(Document(
                 page_content=(
-                    f"Comprobantes que SÍ puede emitir en {acronimo}: "
-                    f"{' | '.join(comp_puede)}."
+                    f"Comprobantes que SÍ puede emitir en el régimen {acronimo} ({nombre}): "
+                    f"{' | '.join(comp_puede)}. "
+                    f"Solo estos comprobantes están permitidos para {acronimo}."
                 ),
                 metadata={"fuente": f"Comprobantes {acronimo}", "regimen": acronimo}
             ))
         if comp_no:
             documentos.append(Document(
                 page_content=(
-                    f"Comprobantes que NO puede emitir en {acronimo}: "
-                    f"{' | '.join(comp_no)}."
+                    f"Comprobantes PROHIBIDOS en el régimen {acronimo} ({nombre}): "
+                    f"NO puede emitir: {' | '.join(comp_no)}. "
+                    f"Emitir estos comprobantes estando en {acronimo} es una infracción."
+                ),
+                metadata={"fuente": f"Comprobantes {acronimo}", "regimen": acronimo}
+            ))
+        # Chunk resumen de comprobantes para preguntas directas
+        if comp_puede or comp_no:
+            puede_txt = " | ".join(comp_puede) if comp_puede else "ninguno adicional"
+            no_txt = " | ".join(comp_no) if comp_no else "ninguno"
+            documentos.append(Document(
+                page_content=(
+                    f"Resumen comprobantes {acronimo} ({nombre}): "
+                    f"SÍ puede emitir: {puede_txt}. "
+                    f"NO puede emitir: {no_txt}."
                 ),
                 metadata={"fuente": f"Comprobantes {acronimo}", "regimen": acronimo}
             ))
@@ -221,15 +243,11 @@ def cargar_base_conocimiento():
         # Deducciones / Gastos deducibles (RMT / RG)
         ded = reg.get("deducciones_y_gastos", reg.get("gastos_deducibles", {}))
         if ded:
-            lista_gastos_cruda = ded.get("gastos_deducibles_principales", [])
-            
-            # Extraemos inteligentemente si es un texto simple (RMT) o un diccionario (RG)
-            gastos_lista = " | ".join([
-                g.get("gasto", "") if isinstance(g, dict) else str(g)
-                for g in lista_gastos_cruda
-            ])
-            
-            principio = ded.get("principio_causalidad", ded.get("principio", ""))
+            gastos_lista = " | ".join(
+                item["gasto"] if isinstance(item, dict) else item
+                for item in ded.get("gastos_deducibles_principales", [])
+            )
+            principio    = ded.get("principio_causalidad", ded.get("principio", ""))
             if gastos_lista or principio:
                 documentos.append(Document(
                     page_content=(
@@ -304,16 +322,30 @@ def cargar_base_conocimiento():
     if tim:
         documentos.append(Document(
             page_content=(
-                f"Tasa de Interés Moratorio (TIM): {tim.get('tasa_mensual', '')} mensual. "
-                f"{tim.get('descripcion', '')}"
+                f"Tasa de Interés Moratorio (TIM): {tim.get('tasa_mensual', '')} mensual "
+                f"({tim.get('tasa_diaria', '')} diario). "
+                f"{tim.get('descripcion', '')}. "
+                f"Se aplica cuando pagas tarde o fuera del plazo un tributo a SUNAT. "
+                f"Cobran intereses por pago tardio de impuestos."
             ),
             metadata={"fuente": "TIM SUNAT", "regimen": "todos"}
         ))
     grad = inf.get("regimen_de_gradualidad", {})
     if grad:
+        rebajas = grad.get("rebajas", {})
+        rebajas_txt = " | ".join(f"{k}: {v}" for k, v in rebajas.items())
         documentos.append(Document(
-            page_content=f"Régimen de gradualidad de infracciones: {grad.get('descripcion', '')}",
+            page_content=(
+                f"Regimen de gradualidad de infracciones: {grad.get('descripcion', '')} "
+                f"Porcentajes de reduccion de multas: {rebajas_txt}"
+            ),
             metadata={"fuente": "Gradualidad SUNAT", "regimen": "todos"}
+        ))
+    # FAQs de infracciones en lenguaje coloquial
+    for faq in inf.get("preguntas_frecuentes", []):
+        documentos.append(Document(
+            page_content=f"FAQ Infracciones — {faq.get('pregunta', '')}: {faq.get('respuesta', '')}",
+            metadata={"fuente": "FAQ Infracciones SUNAT", "regimen": "todos"}
         ))
 
     # Obligaciones tributarias comunes
@@ -340,17 +372,40 @@ def cargar_base_conocimiento():
         metadata={"fuente": "UIT Histórico SUNAT", "regimen": "todos"}
     ))
 
-# ── REGLAS ESPECÍFICAS ──────────────────────────────────────────────────────────
-    documentos.append(Document(
-        page_content="Boletas de Venta - Monto para DNI: Según la normativa vigente de SUNAT, es obligatorio consignar los datos de identificación (Nombres, Apellidos y DNI) del cliente en una Boleta de Venta Electrónica cuando el importe total de la operación supere los S/ 700.00 (Setecientos y 00/100 Soles).", 
-        metadata={"fuente": "Resolución de Superintendencia N° 123-2022/SUNAT", "regimen": "todos"}
-    ))
-    documentos.append(Document(
-        page_content="Anulación de Facturas: Para anular una Factura Electrónica mediante una Nota de Crédito, el plazo máximo excepcional es hasta el séptimo (7mo) día calendario contado desde el día siguiente de la fecha de emisión del comprobante.", 
-        metadata={"fuente": "Resolución de Superintendencia N° 193-2020/SUNAT", "regimen": "todos"}
-    ))
+    # Comprobantes de pago (DNI en boleta, facturas, nota de crédito)
+    comp = data_maestra.get("comprobantes_de_pago", {})
+    if comp:
+        boleta = comp.get("boleta_de_venta", {})
+        datos = boleta.get("datos_del_comprador", {})
+        if datos:
+            documentos.append(Document(
+                page_content=(
+                    f"Boleta de venta — identificación del comprador: {datos.get('regla', '')} "
+                    f"Base legal: {datos.get('base_legal', '')}. "
+                    f"Nota: {datos.get('nota', '')}"
+                ),
+                metadata={"fuente": "Reglamento Comprobantes de Pago (R.S. 007-99/SUNAT)", "regimen": "todos"}
+            ))
+        # Nota de crédito
+        nc = comp.get("nota_de_credito", {})
+        if nc:
+            plazo = nc.get("plazo_para_emitir", {})
+            documentos.append(Document(
+                page_content=(
+                    f"Nota de crédito — plazo de emisión: {plazo.get('regla_general', '')} "
+                    f"Comprobantes electrónicos: {plazo.get('comprobantes_electronicos', '')} "
+                    f"Nota importante: {plazo.get('nota', '')}"
+                ),
+                metadata={"fuente": "Reglamento Comprobantes de Pago (R.S. 007-99/SUNAT)", "regimen": "todos"}
+            ))
+        for faq in comp.get("preguntas_frecuentes", []):
+            documentos.append(Document(
+                page_content=f"FAQ Comprobantes — {faq.get('pregunta', '')}: {faq.get('respuesta', '')}",
+                metadata={"fuente": "Reglamento Comprobantes de Pago (R.S. 007-99/SUNAT)", "regimen": "todos"}
+            ))
+
     # ── VECTOR DB ─────────────────────────────────────────────────────────────
-    # Modelo multilingüe optimizado para español
+    # CORREGIDO: modelo multilingüe optimizado para español
     embeddings = HuggingFaceEmbeddings(
         model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     )
@@ -440,7 +495,7 @@ for message in st.session_state.messages:
 
 # Entrada: teclado o botón rápido
 prompt = st.chat_input("Escribe tu consulta tributaria aquí...")
-if pregunta_rapida:       
+if pregunta_rapida:       # CORREGIDO: ya no se usa locals()
     prompt = pregunta_rapida
 
 if prompt:
@@ -485,12 +540,23 @@ if prompt:
             st.session_state.messages.append({"role": "assistant", "content": respuesta_final})
             st.stop()
 
-        # ── Búsqueda RAG ──────────────────────────────────────────────────────
-        # CORREGIDO: k=5 para más contexto
+        # ── Búsqueda RAG con query enriquecida ───────────────────────────────
         contexto = ""
         fuente = ""
         if vector_db:
-            resultados = vector_db.similarity_search(prompt, k=5)
+            # Enriquecer la query con régimen mencionado en el historial reciente
+            regimenes_keywords = ["NRUS", "Nuevo RUS", "RER", "RMT", "Régimen General",
+                                  "Régimen Especial", "Régimen MYPE"]
+            historial_texto = " ".join(
+                m["content"] for m in st.session_state.messages[-6:]
+                if m["role"] in ("user", "assistant")
+            )
+            regimen_detectado = next(
+                (r for r in regimenes_keywords if r.lower() in historial_texto.lower()), ""
+            )
+            query_enriquecida = f"{prompt} {regimen_detectado}".strip()
+
+            resultados = vector_db.similarity_search(query_enriquecida, k=8)
             if resultados:
                 contexto = "\n".join([doc.page_content for doc in resultados])
                 fuente = resultados[0].metadata.get("fuente", "SUNAT")
@@ -498,7 +564,9 @@ if prompt:
         # ── Historial de conversación (últimos 6 turnos) ──────────────────────
         # CORREGIDO: memoria conversacional real enviada al LLM
         MAX_TURNOS = 6
-        historial_reciente = st.session_state.messages[-(MAX_TURNOS * 2):-1]
+        # CORREGIDO: el mensaje actual ya fue appendeado, así que lo excluimos
+        # con [-(MAX_TURNOS * 2 + 1):-1] para no enviarlo duplicado al LLM
+        historial_reciente = st.session_state.messages[-(MAX_TURNOS * 2 + 1):-1]
         mensajes_historial = [
             {"role": m["role"], "content": m["content"]}
             for m in historial_reciente
@@ -507,19 +575,34 @@ if prompt:
 
         # ── NLG con Groq ──────────────────────────────────────────────────────
         prompt_sistema = f"""
-Eres TAX-BOT PUCP, un asistente virtual empático y experto en tributación peruana (SUNAT).
-Año de referencia: 2024. UIT vigente: S/ 5,150.
+Eres TAX-BOT PUCP, asistente tributario peruano basado EXCLUSIVAMENTE en la
+base de conocimiento de SUNAT proporcionada abajo.
 
-CONTEXTO RECUPERADO DE LA BASE DE CONOCIMIENTO:
+CONTEXTO RECUPERADO (ÚNICA FUENTE VÁLIDA):
 {contexto}
 
-REGLAS DE RESPUESTA:
-1. Responde SOLO basándote en el CONTEXTO RECUPERADO anterior.
-2. Si el contexto no cubre la pregunta del usuario, responde amablemente:
-   "La normativa tributaria es amplia y no tengo el dato exacto de esa consulta en mi base certificada. ¿Podrías detallar tu pregunta o consultar directamente en sunat.gob.pe?"
-3. Usa viñetas (•) para listas y negritas para cifras clave.
-4. Si el usuario hace referencia a una pregunta anterior, considera el historial del chat para dar continuidad.
-5. No inventes tasas, montos ni normas que no estén en el contexto.
+REGLAS ABSOLUTAS — NUNCA LAS VIOLES:
+1. SOLO puedes afirmar datos que aparezcan LITERALMENTE en el CONTEXTO RECUPERADO.
+2. Si el dato NO está en el contexto, responde EXACTAMENTE esta frase y nada más:
+   "No tengo ese dato en mi base certificada. Te recomiendo consultar sunat.gob.pe."
+   PROHIBIDO completar con conocimiento propio. PROHIBIDO adivinar. PROHIBIDO extrapolar.
+3. SEPARACIÓN ESTRICTA DE REGÍMENES: Si el usuario pregunta sobre el NRUS, usa ÚNICAMENTE
+   los chunks que digan "NRUS" o "Nuevo RUS". NUNCA uses información del RER, RMT ni RG
+   para responder preguntas del NRUS, aunque los temas parezcan similares.
+   Ejemplo PROHIBIDO: decir que el NRUS lleva "Registro de Compras y Ventas" (eso es del RER).
+   Ejemplo PROHIBIDO: mezclar reglas de facturación del RER con restricciones del NRUS.
+4. LIBROS CONTABLES DEL NRUS: El Nuevo RUS NO lleva NINGÚN libro contable.
+   Si el contexto indica "NO están obligados a llevar libros", responde exactamente eso.
+   NUNCA menciones Registro de Compras ni Registro de Ventas para el NRUS.
+5. NUNCA inventes ni cites resoluciones, normas, artículos ni números de resolución
+   que no aparezcan TEXTUALMENTE en el contexto. Si la norma no está en el contexto,
+   NO la menciones. Es preferible no citar ninguna norma a inventar una.
+6. NUNCA uses frases como "de acuerdo con la normativa vigente" si no tienes el dato
+   exacto en el contexto. Eso es una señal de que estás inventando.
+7. Usa viñetas (•) para listas y negritas para cifras clave.
+8. Año de referencia: 2026. UIT vigente: S/ 5,500 (D.S. N° 301-2025-EF).
+   Cuando el contexto exprese límites en UIT, recalcúlalos multiplicando por 5,500.
+   Ejemplo: 1,700 UIT = S/ 9,350,000 en 2026.
 """
 
         try:
@@ -536,10 +619,21 @@ REGLAS DE RESPUESTA:
 
             respuesta_groq = chat_completion.choices[0].message.content
 
-            if contexto and "no tengo el dato exacto" not in respuesta_groq.lower():
+            # CORREGIDO bug 2: el string ahora coincide exactamente con lo que
+            # el prompt del sistema le instruye decir al LLM cuando no sabe
+            FRASE_NO_SABE = "no tengo ese dato en mi base certificada"
+            bot_no_sabe = FRASE_NO_SABE in respuesta_groq.lower()
+
+            # CORREGIDO bug 3: mostramos todas las fuentes únicas recuperadas,
+            # no solo la del primer resultado
+            if contexto and not bot_no_sabe:
+                fuentes_unicas = list(dict.fromkeys(
+                    doc.metadata.get("fuente", "SUNAT") for doc in resultados
+                ))
+                fuentes_txt = " | ".join(fuentes_unicas)
                 respuesta_final = (
                     f"{respuesta_groq}\n\n"
-                    f"---\n*📜 Fuente legal consultada: **{fuente}***"
+                    f"---\n*📜 Fuentes legales consultadas: **{fuentes_txt}***"
                 )
             else:
                 respuesta_final = respuesta_groq

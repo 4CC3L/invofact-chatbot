@@ -1007,8 +1007,19 @@ def _page_taxbot() -> None:
         # RAG
         contexto = ""
         fuente   = ""
+        resultados = []
         if vdb:
-            resultados = vdb.similarity_search(prompt, k=5)
+            _REGIMENES_KW = ["NRUS", "Nuevo RUS", "RER", "RMT",
+                             "Régimen General", "Régimen Especial", "Régimen MYPE"]
+            _historial_txt = " ".join(
+                m["content"] for m in st.session_state.taxbot_messages[-6:]
+                if m["role"] in ("user", "assistant")
+            )
+            _regimen_det = next(
+                (r for r in _REGIMENES_KW if r.lower() in _historial_txt.lower()), ""
+            )
+            _query_enr = f"{prompt} {_regimen_det}".strip()
+            resultados = vdb.similarity_search(_query_enr, k=8)
             if resultados:
                 contexto = "\n".join(d.page_content for d in resultados)
                 fuente   = resultados[0].metadata.get("fuente", "SUNAT")
@@ -1020,7 +1031,8 @@ def _page_taxbot() -> None:
         ]
 
         sys_prompt = f"""Eres TAX-BOT SUNAT, asistente experto en tributación peruana.
-Año de referencia: 2024. UIT vigente: S/ 5,150.
+Año de referencia: 2026. UIT vigente: S/ 5,500 (D.S. N° 301-2025-EF).
+Cuando el contexto exprese límites en UIT, recalcúlalos multiplicando por 5,500.
 
 CONTEXTO DE LA BASE DE CONOCIMIENTO:
 {contexto}
@@ -1045,11 +1057,15 @@ REGLAS:
                 stream=False,
             )
             rx = comp.choices[0].message.content
-            respuesta = (
-                f"{rx}\n\n---\n*📜 Fuente: **{fuente}***"
-                if contexto and "no tengo" not in rx.lower()
-                else rx
-            )
+            _FRASE_NO_SABE = "no tengo ese dato en mi base certificada"
+            _bot_no_sabe = _FRASE_NO_SABE in rx.lower() or "no tengo esa información" in rx.lower()
+            if contexto and not _bot_no_sabe:
+                _fuentes_unicas = list(dict.fromkeys(
+                    d.metadata.get("fuente", "SUNAT") for d in resultados
+                ))
+                respuesta = f"{rx}\n\n---\n*📜 Fuentes legales consultadas: **{' | '.join(_fuentes_unicas)}***"
+            else:
+                respuesta = rx
         except Exception as e:
             respuesta = f"❌ Error de conexión con Groq: {e}"
 

@@ -23,7 +23,7 @@ nltk.download("punkt_tab",  quiet=True)
 nltk.download("stopwords",  quiet=True)
 
 # ── Constantes ─────────────────────────────────────────────
-DATASET_PATH         = Path(__file__).parent / "dataset2.json"
+DATASET_PATH         = Path(__file__).parent / "dataset_invofact.json"
 MODEL_NAME           = "paraphrase-multilingual-MiniLM-L12-v2"
 CONFIDENCE_THRESHOLD = 0.50
 
